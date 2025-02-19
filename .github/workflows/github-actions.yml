@@ -9,12 +9,12 @@ on:
       - main
 
 jobs:
-  biuld-and-test:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: sudo update && sudo apt install -y cmake g++ make libgtest-dev
