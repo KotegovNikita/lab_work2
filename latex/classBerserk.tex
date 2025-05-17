@@ -1,0 +1,234 @@
+\doxysection{Berserk Class Reference}
+\hypertarget{classBerserk}{}\label{classBerserk}\index{Berserk@{Berserk}}
+
+
+A \doxylink{classWarrior}{Warrior} character card known for aggressive attack behavior.  
+
+
+
+
+{\ttfamily \#include $<$Berserk.\+hpp$>$}
+
+
+
+Inheritance diagram for Berserk\+:
+% FIG 0
+
+
+Collaboration diagram for Berserk\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBerserk_ab4bcf20cac077487f5d48fa714633d6a}{Berserk}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classBerserk}{Berserk} character card. \end{DoxyCompactList}\item 
+\Hypertarget{classBerserk_a2a5e7c5a4a1f704d215967d18fb6811d}\label{classBerserk_a2a5e7c5a4a1f704d215967d18fb6811d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Berserk} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBerserk_aa540ce0b5f993dc88da9c7139e7196f5}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBerserk_afb0b589e31af9a2f6a4bd49f4f1a6bac}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the cost of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBerserk_a97d3e5a2737a3b79769da9e9c14e632a}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the attack value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBerserk_a674c63ffeb7b8cf597445bce6f266aaa}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the health value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBerserk_a08c0d8e233774744dd56ff6ce2cb51a0}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Activates the card’s effect (summons the \doxylink{classBerserk}{Berserk} to the field). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classWarrior}{Warrior}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWarrior_a15b60510dfaae1f4dc0fdb578f2549a5}{Warrior}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWarrior}{Warrior} character card. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Warrior} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play this card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{classWarrior}{Warrior} character card known for aggressive attack behavior. 
+
+Inherits from \doxylink{classWarrior}{Warrior}. May have enhanced effects when summoned or while attacking, depending on the game logic implemented in the {\ttfamily \doxylink{classBerserk_a08c0d8e233774744dd56ff6ce2cb51a0}{use()}} method. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBerserk_ab4bcf20cac077487f5d48fa714633d6a}\label{classBerserk_ab4bcf20cac077487f5d48fa714633d6a} 
+\index{Berserk@{Berserk}!Berserk@{Berserk}}
+\index{Berserk@{Berserk}!Berserk@{Berserk}}
+\doxysubsubsection{\texorpdfstring{Berserk()}{Berserk()}}
+{\footnotesize\ttfamily Berserk\+::\+Berserk (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classBerserk}{Berserk} character card. 
+
+Constructs a \doxylink{classBerserk}{Berserk} card with the given parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The resource cost to play this card. \\
+\hline
+{\em attack} & The attack power of the \doxylink{classBerserk}{Berserk}. \\
+\hline
+{\em health} & The health value of the \doxylink{classBerserk}{Berserk}.\\
+\hline
+{\em name} & The name of the \doxylink{classBerserk}{Berserk} character. \\
+\hline
+{\em cost} & The cost to play the card. \\
+\hline
+{\em attack} & The attack value of the \doxylink{classBerserk}{Berserk}. \\
+\hline
+{\em health} & The health value of the \doxylink{classBerserk}{Berserk}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBerserk_a97d3e5a2737a3b79769da9e9c14e632a}\label{classBerserk_a97d3e5a2737a3b79769da9e9c14e632a} 
+\index{Berserk@{Berserk}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Berserk@{Berserk}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Berserk\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the attack value. 
+
+Gets the attack value of the \doxylink{classBerserk}{Berserk}.
+
+\begin{DoxyReturn}{Returns}
+Integer attack value.
+
+Attack value as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{Character\+Card}}.
+
+\Hypertarget{classBerserk_afb0b589e31af9a2f6a4bd49f4f1a6bac}\label{classBerserk_afb0b589e31af9a2f6a4bd49f4f1a6bac} 
+\index{Berserk@{Berserk}!getCost@{getCost}}
+\index{getCost@{getCost}!Berserk@{Berserk}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Berserk\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the cost of the card. 
+
+Gets the resource cost to play the \doxylink{classBerserk}{Berserk} card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+Cost as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+\Hypertarget{classBerserk_a674c63ffeb7b8cf597445bce6f266aaa}\label{classBerserk_a674c63ffeb7b8cf597445bce6f266aaa} 
+\index{Berserk@{Berserk}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Berserk@{Berserk}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Berserk\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the health value. 
+
+Gets the health value of the \doxylink{classBerserk}{Berserk}.
+
+\begin{DoxyReturn}{Returns}
+Integer health value.
+
+Health value as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{Character\+Card}}.
+
+\Hypertarget{classBerserk_aa540ce0b5f993dc88da9c7139e7196f5}\label{classBerserk_aa540ce0b5f993dc88da9c7139e7196f5} 
+\index{Berserk@{Berserk}!getName@{getName}}
+\index{getName@{getName}!Berserk@{Berserk}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Berserk\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the card. 
+
+Gets the name of the \doxylink{classBerserk}{Berserk} card.
+
+\begin{DoxyReturn}{Returns}
+Name as a string.
+
+Name as a std\+::string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+\Hypertarget{classBerserk_a08c0d8e233774744dd56ff6ce2cb51a0}\label{classBerserk_a08c0d8e233774744dd56ff6ce2cb51a0} 
+\index{Berserk@{Berserk}!use@{use}}
+\index{use@{use}!Berserk@{Berserk}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Berserk\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activates the card’s effect (summons the \doxylink{classBerserk}{Berserk} to the field). 
+
+Executes the \doxylink{classBerserk}{Berserk} card\textquotesingle{}s effect.
+
+The \doxylink{classBerserk}{Berserk} may later receive special bonuses such as rage or retaliation, depending on game mechanics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} managing the game.\\
+\hline
+\end{DoxyParams}
+This method creates a new \doxylink{classCharacter}{Character} instance with the \doxylink{classBerserk}{Berserk}\textquotesingle{}s stats and places it on the appropriate field (player or AI), depending on whose turn it is.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} managing the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Berserk_8hpp}{Berserk.\+hpp}}\item 
+src/Berserk.\+cpp\end{DoxyCompactItemize}

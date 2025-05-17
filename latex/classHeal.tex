@@ -1,0 +1,91 @@
+\doxysection{Heal Class Reference}
+\hypertarget{classHeal}{}\label{classHeal}\index{Heal@{Heal}}
+
+
+A support card that heals damaged characters on the battlefield.  
+
+
+
+
+{\ttfamily \#include $<$Heal.\+hpp$>$}
+
+
+
+Inheritance diagram for Heal\+:
+% FIG 0
+
+
+Collaboration diagram for Heal\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHeal_aa7fdaff75ed9159935a53f9653695251}{Heal}} (const std\+::string \&name, int cost, int heal\+Power)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHeal}{Heal} support card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSupportCard}{Support\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSupportCard_a562738edad1adf3689e463ac06b90b29}{Support\+Card}} (const std\+::string \&name, int cost, int power)
+\begin{DoxyCompactList}\small\item\em Constructs a support card. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Support\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the support card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play the card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Executes the card’s effect (to be overridden in derived classes). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSupportCard}{Support\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+power}
+\begin{DoxyCompactList}\small\item\em Effect strength (e.\+g., healing amount or shield value) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A support card that heals damaged characters on the battlefield. 
+
+Inherits from \doxylink{classSupportCard}{Support\+Card}. When played, this card applies healing logic defined in the {\ttfamily .cpp} file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHeal_aa7fdaff75ed9159935a53f9653695251}\label{classHeal_aa7fdaff75ed9159935a53f9653695251} 
+\index{Heal@{Heal}!Heal@{Heal}}
+\index{Heal@{Heal}!Heal@{Heal}}
+\doxysubsubsection{\texorpdfstring{Heal()}{Heal()}}
+{\footnotesize\ttfamily Heal\+::\+Heal (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{heal\+Power }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classHeal}{Heal} support card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The cost to play the card. \\
+\hline
+{\em heal\+Power} & The amount of health restored by the card.\\
+\hline
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The mana or energy cost to play the card. \\
+\hline
+{\em heal\+Power} & The amount of health restored by this card. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Heal_8hpp}{Heal.\+hpp}}\item 
+src/\mbox{\hyperlink{Heal_8cpp}{Heal.\+cpp}}\end{DoxyCompactItemize}

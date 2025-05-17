@@ -1,0 +1,90 @@
+\doxysection{Test\+Attack\+Card Class Reference}
+\hypertarget{classTestAttackCard}{}\label{classTestAttackCard}\index{TestAttackCard@{TestAttackCard}}
+
+
+Test implementation of \doxylink{classAttackCard}{Attack\+Card}.  
+
+
+
+
+Inheritance diagram for Test\+Attack\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Attack\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTestAttackCard_a6dd7bc267deee7d8b7d08f26e5d67c7e}\label{classTestAttackCard_a6dd7bc267deee7d8b7d08f26e5d67c7e} 
+{\bfseries Test\+Attack\+Card} (const std\+::string \&n, int c, int d)
+\item 
+void \mbox{\hyperlink{classTestAttackCard_ae3e484e84d0bcfdc8f314fdffade1502}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&) override
+\begin{DoxyCompactList}\small\item\em Applies the effect of the attack card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classAttackCard}{Attack\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAttackCard_ac07b89011690a554281f3cc0aa1d10e7}{Attack\+Card}} (const std\+::string \&name, int cost, int damage)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAttackCard}{Attack\+Card} with specified parameters. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Attack\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAttackCard_a1ac161818357743ae17e9456d1ce480f}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the card name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the cost to play this card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classAttackCard}{Attack\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the attack card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+damage}
+\begin{DoxyCompactList}\small\item\em Amount of damage dealt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test implementation of \doxylink{classAttackCard}{Attack\+Card}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTestAttackCard_ae3e484e84d0bcfdc8f314fdffade1502}\label{classTestAttackCard_ae3e484e84d0bcfdc8f314fdffade1502} 
+\index{TestAttackCard@{TestAttackCard}!use@{use}}
+\index{use@{use}!TestAttackCard@{TestAttackCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Test\+Attack\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the effect of the attack card. 
+
+Applies the attack card effect.
+
+Must be overridden by derived classes to define how damage is applied in the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} instance managing the current game state.\\
+\hline
+\end{DoxyParams}
+This function logs the attack action and shows the amount of damage dealt. Actual game mechanics for applying damage should be implemented here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} for accessing the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911}{Attack\+Card}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{test__card__logic_8cpp}{test\+\_\+card\+\_\+logic.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+\doxysection{Lightning\+\_\+strike Class Reference}
+\hypertarget{classLightning__strike}{}\label{classLightning__strike}\index{Lightning\_strike@{Lightning\_strike}}
+
+
+An attack card that targets and damages a single enemy character.  
+
+
+
+
+{\ttfamily \#include $<$Lightning\+\_\+strike.\+hpp$>$}
+
+
+
+Inheritance diagram for Lightning\+\_\+strike\+:
+% FIG 0
+
+
+Collaboration diagram for Lightning\+\_\+strike\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLightning__strike_aa7e84736c2a5d1b7a0920c429b3afe72}{Lightning\+\_\+strike}} (const std\+::string \&name, int cost, int damage)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classLightning__strike}{Lightning\+\_\+strike} card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLightning__strike_a0fb3893331ff718184c7ec30ae35b07f}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Applies the \doxylink{classLightning__strike}{Lightning\+\_\+strike} effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classAttackCard}{Attack\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAttackCard_ac07b89011690a554281f3cc0aa1d10e7}{Attack\+Card}} (const std\+::string \&name, int cost, int damage)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAttackCard}{Attack\+Card} with specified parameters. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Attack\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAttackCard_a1ac161818357743ae17e9456d1ce480f}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the card name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the cost to play this card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classAttackCard}{Attack\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the attack card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+damage}
+\begin{DoxyCompactList}\small\item\em Amount of damage dealt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An attack card that targets and damages a single enemy character. 
+
+Inherits from \doxylink{classAttackCard}{Attack\+Card}. When used, this card strikes the first available enemy on the battlefield (typically used by AI), and may eliminate it instantly if its health drops to 0. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLightning__strike_aa7e84736c2a5d1b7a0920c429b3afe72}\label{classLightning__strike_aa7e84736c2a5d1b7a0920c429b3afe72} 
+\index{Lightning\_strike@{Lightning\_strike}!Lightning\_strike@{Lightning\_strike}}
+\index{Lightning\_strike@{Lightning\_strike}!Lightning\_strike@{Lightning\_strike}}
+\doxysubsubsection{\texorpdfstring{Lightning\_strike()}{Lightning\_strike()}}
+{\footnotesize\ttfamily Lightning\+\_\+strike\+::\+Lightning\+\_\+strike (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classLightning__strike}{Lightning\+\_\+strike} card. 
+
+Constructs a \doxylink{classLightning__strike}{Lightning\+\_\+strike} attack card.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The cost to play the card. \\
+\hline
+{\em damage} & The amount of damage dealt to the target.\\
+\hline
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The energy/mana cost to play the card. \\
+\hline
+{\em damage} & The amount of damage the card deals when used. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLightning__strike_a0fb3893331ff718184c7ec30ae35b07f}\label{classLightning__strike_a0fb3893331ff718184c7ec30ae35b07f} 
+\index{Lightning\_strike@{Lightning\_strike}!use@{use}}
+\index{use@{use}!Lightning\_strike@{Lightning\_strike}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Lightning\+\_\+strike\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the \doxylink{classLightning__strike}{Lightning\+\_\+strike} effect. 
+
+Applies the effect of the \doxylink{classLightning__strike}{Lightning\+\_\+strike} card.
+
+Deals damage to the first enemy character on the opponent\textquotesingle{}s field. If the target\textquotesingle{}s HP reaches zero, it is removed from the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the match.\\
+\hline
+\end{DoxyParams}
+Deals direct damage to the first enemy character on the opponent’s battlefield (usually the player). If the target\textquotesingle{}s health drops to zero or below, it is removed from the field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} instance managing the match state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911}{Attack\+Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Lightning__strike_8hpp}{Lightning\+\_\+strike.\+hpp}}\item 
+src/\mbox{\hyperlink{Lightning__strike_8cpp}{Lightning\+\_\+strike.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,230 @@
+\doxysection{Elementalist Class Reference}
+\hypertarget{classElementalist}{}\label{classElementalist}\index{Elementalist@{Elementalist}}
+
+
+A \doxylink{classMage}{Mage} subclass that represents a character with elemental abilities.  
+
+
+
+
+{\ttfamily \#include $<$Elementalist.\+hpp$>$}
+
+
+
+Inheritance diagram for Elementalist\+:
+% FIG 0
+
+
+Collaboration diagram for Elementalist\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classElementalist_a4b2463d21115dfb1c52805aee98475d7}{Elementalist}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classElementalist}{Elementalist} card. \end{DoxyCompactList}\item 
+\Hypertarget{classElementalist_a397916f1a4028a388850bdca22b71d2c}\label{classElementalist_a397916f1a4028a388850bdca22b71d2c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Elementalist} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classElementalist_a7269cddac19d97d71221fd8ec1dbc8c0}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the card name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classElementalist_a886b8b930bd9c33cecd1a5b3ebfb56a4}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the card cost. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classElementalist_a4e62703e36cbecb6f6868b431333fd1c}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the attack value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classElementalist_ad085ce9d8c24a83774be7b1a7359e8b5}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the health value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classElementalist_a6792e7d612c678e2f1954334e5d70ba7}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Applies the \doxylink{classElementalist}{Elementalist} card effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMage}{Mage}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMage_a6a559cf5ac5568dce67519ca6fe59c19}{Mage}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classMage}{Mage} card. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Mage} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{classMage}{Mage} subclass that represents a character with elemental abilities. 
+
+Inherits from \doxylink{classMage}{Mage}. The \doxylink{classElementalist}{Elementalist} is a character card that can be summoned to the battlefield and may include special elemental effects (implemented in the {\ttfamily .cpp} file). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classElementalist_a4b2463d21115dfb1c52805aee98475d7}\label{classElementalist_a4b2463d21115dfb1c52805aee98475d7} 
+\index{Elementalist@{Elementalist}!Elementalist@{Elementalist}}
+\index{Elementalist@{Elementalist}!Elementalist@{Elementalist}}
+\doxysubsubsection{\texorpdfstring{Elementalist()}{Elementalist()}}
+{\footnotesize\ttfamily Elementalist\+::\+Elementalist (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classElementalist}{Elementalist} card. 
+
+Constructs an \doxylink{classElementalist}{Elementalist} card with specified attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the card. \\
+\hline
+{\em cost} & Cost to play the card. \\
+\hline
+{\em attack} & Attack value of the \doxylink{classElementalist}{Elementalist}. \\
+\hline
+{\em health} & Health value of the \doxylink{classElementalist}{Elementalist}.\\
+\hline
+{\em name} & The name of the \doxylink{classElementalist}{Elementalist}. \\
+\hline
+{\em cost} & The cost required to play the card. \\
+\hline
+{\em attack} & The attack value of the \doxylink{classElementalist}{Elementalist}. \\
+\hline
+{\em health} & The health value of the \doxylink{classElementalist}{Elementalist}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classElementalist_a4e62703e36cbecb6f6868b431333fd1c}\label{classElementalist_a4e62703e36cbecb6f6868b431333fd1c} 
+\index{Elementalist@{Elementalist}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Elementalist@{Elementalist}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Elementalist\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the attack value. 
+
+Retrieves the attack value of the \doxylink{classElementalist}{Elementalist}.
+
+\begin{DoxyReturn}{Returns}
+Integer attack.
+
+Attack value as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{Character\+Card}}.
+
+\Hypertarget{classElementalist_a886b8b930bd9c33cecd1a5b3ebfb56a4}\label{classElementalist_a886b8b930bd9c33cecd1a5b3ebfb56a4} 
+\index{Elementalist@{Elementalist}!getCost@{getCost}}
+\index{getCost@{getCost}!Elementalist@{Elementalist}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Elementalist\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the card cost. 
+
+Retrieves the cost to play the \doxylink{classElementalist}{Elementalist} card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost.
+
+Cost as an integer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{Character\+Card}}.
+
+\Hypertarget{classElementalist_ad085ce9d8c24a83774be7b1a7359e8b5}\label{classElementalist_ad085ce9d8c24a83774be7b1a7359e8b5} 
+\index{Elementalist@{Elementalist}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Elementalist@{Elementalist}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Elementalist\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the health value. 
+
+Retrieves the health value of the \doxylink{classElementalist}{Elementalist}.
+
+\begin{DoxyReturn}{Returns}
+Integer health.
+
+Health value as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{Character\+Card}}.
+
+\Hypertarget{classElementalist_a7269cddac19d97d71221fd8ec1dbc8c0}\label{classElementalist_a7269cddac19d97d71221fd8ec1dbc8c0} 
+\index{Elementalist@{Elementalist}!getName@{getName}}
+\index{getName@{getName}!Elementalist@{Elementalist}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Elementalist\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the card name. 
+
+Retrieves the name of the \doxylink{classElementalist}{Elementalist} card.
+
+\begin{DoxyReturn}{Returns}
+String name.
+
+Name as a std\+::string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{Character\+Card}}.
+
+\Hypertarget{classElementalist_a6792e7d612c678e2f1954334e5d70ba7}\label{classElementalist_a6792e7d612c678e2f1954334e5d70ba7} 
+\index{Elementalist@{Elementalist}!use@{use}}
+\index{use@{use}!Elementalist@{Elementalist}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Elementalist\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the \doxylink{classElementalist}{Elementalist} card effect. 
+
+Uses the \doxylink{classElementalist}{Elementalist} card by summoning the character to the battlefield.
+
+Typically summons the \doxylink{classElementalist}{Elementalist} to the field. Additional logic may be added in {\ttfamily .cpp} to implement elemental effects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager}.\\
+\hline
+\end{DoxyParams}
+Creates a \doxylink{classCharacter}{Character} instance with the card\textquotesingle{}s stats and adds it to the appropriate field (player or AI), based on the current turn tracked by the \doxylink{classGameManager}{Game\+Manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} that handles game state and turns. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Elementalist_8hpp}{Elementalist.\+hpp}}\item 
+src/Elementalist.\+cpp\end{DoxyCompactItemize}

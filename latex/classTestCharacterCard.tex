@@ -1,0 +1,130 @@
+\doxysection{Test\+Character\+Card Class Reference}
+\hypertarget{classTestCharacterCard}{}\label{classTestCharacterCard}\index{TestCharacterCard@{TestCharacterCard}}
+
+
+Test implementation of \doxylink{classCharacterCard}{Character\+Card}.  
+
+
+
+
+Inheritance diagram for Test\+Character\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Character\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTestCharacterCard_af75b3701e780a6dbbf8080ec01827d8e}\label{classTestCharacterCard_af75b3701e780a6dbbf8080ec01827d8e} 
+{\bfseries Test\+Character\+Card} (const std\+::string \&n, int c, int a, int h)
+\item 
+int \mbox{\hyperlink{classTestCharacterCard_a85d6c9453affaba16afe0ecbb8503cdc}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the attack value of the character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTestCharacterCard_a2b817138606ab9834bfb243624f596ee}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the health value of the character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTestCharacterCard_aecebd1277c70f2a619a2cce465564024}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&) override
+\begin{DoxyCompactList}\small\item\em Defines the effect of using the card (typically summoning a character to the field). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play this card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test implementation of \doxylink{classCharacterCard}{Character\+Card}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTestCharacterCard_a85d6c9453affaba16afe0ecbb8503cdc}\label{classTestCharacterCard_a85d6c9453affaba16afe0ecbb8503cdc} 
+\index{TestCharacterCard@{TestCharacterCard}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!TestCharacterCard@{TestCharacterCard}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Test\+Character\+Card\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the attack value of the character. 
+
+\begin{DoxyReturn}{Returns}
+Integer attack value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{Character\+Card}}.
+
+\Hypertarget{classTestCharacterCard_a2b817138606ab9834bfb243624f596ee}\label{classTestCharacterCard_a2b817138606ab9834bfb243624f596ee} 
+\index{TestCharacterCard@{TestCharacterCard}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!TestCharacterCard@{TestCharacterCard}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Test\+Character\+Card\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the health value of the character. 
+
+\begin{DoxyReturn}{Returns}
+Integer health value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{Character\+Card}}.
+
+\Hypertarget{classTestCharacterCard_aecebd1277c70f2a619a2cce465564024}\label{classTestCharacterCard_aecebd1277c70f2a619a2cce465564024} 
+\index{TestCharacterCard@{TestCharacterCard}!use@{use}}
+\index{use@{use}!TestCharacterCard@{TestCharacterCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Test\+Character\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Defines the effect of using the card (typically summoning a character to the field). 
+
+Uses the character card to perform an action in the game.
+
+Must be implemented by derived classes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the game.\\
+\hline
+\end{DoxyParams}
+This method is a placeholder. In the final version, it should summon a character onto the battlefield via the \doxylink{classGameManager}{Game\+Manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{test__card__logic_8cpp}{test\+\_\+card\+\_\+logic.\+cpp}}\end{DoxyCompactItemize}

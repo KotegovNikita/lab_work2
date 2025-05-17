@@ -1,0 +1,32 @@
+\doxysection{Attack\+Card.\+hpp}
+\hypertarget{AttackCard_8hpp_source}{}\label{AttackCard_8hpp_source}\index{include/AttackCard.hpp@{include/AttackCard.hpp}}
+\mbox{\hyperlink{AttackCard_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ATTACK\_CARD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ATTACK\_CARD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Card_8hpp}{Card.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAttackCard}{AttackCard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCard}{Card}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ \mbox{\hyperlink{classAttackCard_a4e607b396c83cd01b7f8d4d081e0590f}{m\_name}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAttackCard_afd4ed872aceb01777227abef1cf82e52}{m\_cost}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAttackCard_a877561c9be898aa78b094944d8aedc48}{m\_damage}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classAttackCard}{AttackCard}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ cost,\ \textcolor{keywordtype}{int}\ damage);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classAttackCard_a17f87a155196803b7dc2dd986a68480a}{\string~AttackCard}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ \mbox{\hyperlink{classAttackCard_a1ac161818357743ae17e9456d1ce480f}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1}{getCost}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911}{use}}(\mbox{\hyperlink{classGameManager}{GameManager}}\&\ gm)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ATTACK\_CARD\_HPP}}
+\DoxyCodeLine{00066\ }
+
+\end{DoxyCode}

@@ -1,0 +1,240 @@
+\doxysection{Assassin Class Reference}
+\hypertarget{classAssassin}{}\label{classAssassin}\index{Assassin@{Assassin}}
+
+
+Represents a Rogue-\/type character card with distinct properties or effects.  
+
+
+
+
+{\ttfamily \#include $<$Assassin.\+hpp$>$}
+
+
+
+Inheritance diagram for Assassin\+:
+% FIG 0
+
+
+Collaboration diagram for Assassin\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAssassin_ab9eb4e67f4ece3575d03f02cfc81e43f}{Assassin}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAssassin}{Assassin} card. \end{DoxyCompactList}\item 
+\Hypertarget{classAssassin_ad813bfc9f4e63d101cf667e72b760f45}\label{classAssassin_ad813bfc9f4e63d101cf667e72b760f45} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Assassin} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAssassin_a60413b97f3fc6be837e53a29ef27d075}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAssassin_a740c39b052cf139cc4c729b34126cc55}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play this card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAssassin_afcfff7733ae5fa679f9d46e05f82039e}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the attack value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAssassin_abb74b44f058f0da1a63483ce22ed478a}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the health value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAssassin_a4b512a7ab07a00c932bcecab48d49f0c}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Applies the effect of the \doxylink{classAssassin}{Assassin} card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRogue}{Rogue}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRogue_ad3d7665649e33c01bded7c6ec84239cb}{Rogue}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRogue}{Rogue} card. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Rogue} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRogue_a134e394987ed34b5493536e350f48dee}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRogue_a12483649ebb449e4f46938a71db573de}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the cost of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the attack value of the rogue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRogue_a2c3c98456309805a07065d3e9ef283d5}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the health value of the rogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Activates the Rogue’s effect by summoning it to the battlefield. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Rogue-\/type character card with distinct properties or effects. 
+
+Inherits from the \doxylink{classRogue}{Rogue} class. Can be extended with special behaviors in the overridden {\ttfamily \doxylink{classAssassin_a4b512a7ab07a00c932bcecab48d49f0c}{use()}} method. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAssassin_ab9eb4e67f4ece3575d03f02cfc81e43f}\label{classAssassin_ab9eb4e67f4ece3575d03f02cfc81e43f} 
+\index{Assassin@{Assassin}!Assassin@{Assassin}}
+\index{Assassin@{Assassin}!Assassin@{Assassin}}
+\doxysubsubsection{\texorpdfstring{Assassin()}{Assassin()}}
+{\footnotesize\ttfamily Assassin\+::\+Assassin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classAssassin}{Assassin} card. 
+
+Constructs an \doxylink{classAssassin}{Assassin} card with specified attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the assassin. \\
+\hline
+{\em cost} & Resource cost to play the card. \\
+\hline
+{\em attack} & Attack value of the assassin. \\
+\hline
+{\em health} & Health value of the assassin.\\
+\hline
+{\em name} & The name of the \doxylink{classAssassin}{Assassin}. \\
+\hline
+{\em cost} & The resource cost to play the card. \\
+\hline
+{\em attack} & The attack value of the \doxylink{classAssassin}{Assassin}. \\
+\hline
+{\em health} & The health value of the \doxylink{classAssassin}{Assassin}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAssassin_afcfff7733ae5fa679f9d46e05f82039e}\label{classAssassin_afcfff7733ae5fa679f9d46e05f82039e} 
+\index{Assassin@{Assassin}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Assassin@{Assassin}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Assassin\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the attack value. 
+
+Returns the attack value of the \doxylink{classAssassin}{Assassin}.
+
+\begin{DoxyReturn}{Returns}
+Integer attack value.
+
+Attack as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{Character\+Card}}.
+
+\Hypertarget{classAssassin_a740c39b052cf139cc4c729b34126cc55}\label{classAssassin_a740c39b052cf139cc4c729b34126cc55} 
+\index{Assassin@{Assassin}!getCost@{getCost}}
+\index{getCost@{getCost}!Assassin@{Assassin}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Assassin\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the cost to play this card. 
+
+Returns the cost to play the \doxylink{classAssassin}{Assassin} card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+Cost as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+\Hypertarget{classAssassin_abb74b44f058f0da1a63483ce22ed478a}\label{classAssassin_abb74b44f058f0da1a63483ce22ed478a} 
+\index{Assassin@{Assassin}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Assassin@{Assassin}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Assassin\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the health value. 
+
+Returns the health value of the \doxylink{classAssassin}{Assassin}.
+
+\begin{DoxyReturn}{Returns}
+Integer health value.
+
+Health as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{Character\+Card}}.
+
+\Hypertarget{classAssassin_a60413b97f3fc6be837e53a29ef27d075}\label{classAssassin_a60413b97f3fc6be837e53a29ef27d075} 
+\index{Assassin@{Assassin}!getName@{getName}}
+\index{getName@{getName}!Assassin@{Assassin}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Assassin\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name of the card. 
+
+Returns the name of the \doxylink{classAssassin}{Assassin} card.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classCard}{Card} name.
+
+Name as a std\+::string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+\Hypertarget{classAssassin_a4b512a7ab07a00c932bcecab48d49f0c}\label{classAssassin_a4b512a7ab07a00c932bcecab48d49f0c} 
+\index{Assassin@{Assassin}!use@{use}}
+\index{use@{use}!Assassin@{Assassin}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Assassin\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the effect of the \doxylink{classAssassin}{Assassin} card. 
+
+Executes the \doxylink{classAssassin}{Assassin}\textquotesingle{}s effect when played.
+
+Typically summons a character to the field. Override may include special effects like instant damage or stealth.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the match.\\
+\hline
+\end{DoxyParams}
+This function handles the summoning of the \doxylink{classAssassin}{Assassin} to the field. A new \doxylink{classCharacter}{Character} instance is created and added to the appropriate side based on whose turn it is. Unique mechanics such as critical strike can be added here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Assassin_8hpp}{Assassin.\+hpp}}\item 
+src/Assassin.\+cpp\end{DoxyCompactItemize}

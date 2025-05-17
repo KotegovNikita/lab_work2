@@ -1,0 +1,37 @@
+\doxysection{Character\+Card.\+hpp}
+\hypertarget{CharacterCard_8hpp_source}{}\label{CharacterCard_8hpp_source}\index{include/CharacterCard.hpp@{include/CharacterCard.hpp}}
+\mbox{\hyperlink{CharacterCard_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHARACTER\_CARD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHARACTER\_CARD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Card_8hpp}{Card.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCharacterCard}{CharacterCard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCard}{Card}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{classCharacterCard_a6c79fc086187bc62aacbc4fe010397a9}{m\_name}};\ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacterCard_a8d2f197e8a5ff8e89020c772023c59f8}{m\_cost}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacterCard_aaf1b9921026c13a3adace748526563f7}{m\_attack}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacterCard_aa9e1cb9cc9f634757b74cf2752b1a978}{m\_health}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classCharacterCard}{CharacterCard}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ cost,\ \textcolor{keywordtype}{int}\ attack,\ \textcolor{keywordtype}{int}\ health);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classCharacterCard_ad2f9aa4488a2ea6a2863733793517223}{\string~CharacterCard}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{getAttack}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{getHealth}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{use}}(\mbox{\hyperlink{classGameManager}{GameManager}}\&\ gm)\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ std::string\ \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{getCost}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHARACTER\_CARD\_HPP}}
+\DoxyCodeLine{00077\ }
+
+\end{DoxyCode}

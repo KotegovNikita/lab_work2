@@ -1,0 +1,77 @@
+\doxysection{Game\+Manager Logic Tests}
+\hypertarget{group__GameManagerTests}{}\label{group__GameManagerTests}\index{GameManager Logic Tests@{GameManager Logic Tests}}
+
+
+Covers deck initialization, drawing, hand constraints, AI behavior, and game-\/over detection.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}
+\begin{DoxyCompactList}\small\item\em Test fixture for Game\+Manager-\/based tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga246bed3cbcaff2cb79bdc66565e94f0b}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Initialize\+Decks)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga50cc8471d616c584617d62c2117c7d86}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Deal\+Cards\+Check\+Limits)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga988d7ec0db3be3f235d4a1f391742bff}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Draw\+Card\+For\+Player)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga015e4677128b17eba05dbc26dcd26e57}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Check\+Game\+Over\+And\+Determine\+Winner\+Empty)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_gab82cd0a31c92851059ab9b62151cad95}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Ai\+Make\+Move\+Non\+Empty\+Hand)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Covers deck initialization, drawing, hand constraints, AI behavior, and game-\/over detection. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__GameManagerTests_gab82cd0a31c92851059ab9b62151cad95}\label{group__GameManagerTests_gab82cd0a31c92851059ab9b62151cad95} 
+\index{GameManager Logic Tests@{GameManager Logic Tests}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!GameManager Logic Tests@{GameManager Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}}]{,  }\item[{Ai\+Make\+Move\+Non\+Empty\+Hand}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000012}{Test}}]Ensures the AI plays a card if its hand is non-\/empty and its field is empty. \end{DoxyRefDesc}
+\Hypertarget{group__GameManagerTests_ga015e4677128b17eba05dbc26dcd26e57}\label{group__GameManagerTests_ga015e4677128b17eba05dbc26dcd26e57} 
+\index{GameManager Logic Tests@{GameManager Logic Tests}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!GameManager Logic Tests@{GameManager Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}}]{,  }\item[{Check\+Game\+Over\+And\+Determine\+Winner\+Empty}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000011}{Test}}]Verifies that game ends and reports a draw when all resources are empty. \end{DoxyRefDesc}
+\Hypertarget{group__GameManagerTests_ga50cc8471d616c584617d62c2117c7d86}\label{group__GameManagerTests_ga50cc8471d616c584617d62c2117c7d86} 
+\index{GameManager Logic Tests@{GameManager Logic Tests}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!GameManager Logic Tests@{GameManager Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}}]{,  }\item[{Deal\+Cards\+Check\+Limits}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000009}{Test}}]Validates that deal\+Cards respects card composition rules\+:
+\begin{DoxyItemize}
+\item max 1 \doxylink{classThief}{Thief}
+\item attempts to limit to 4 Ability\+Cards (may be exceeded via fallback). 
+\end{DoxyItemize}\end{DoxyRefDesc}
+\Hypertarget{group__GameManagerTests_ga988d7ec0db3be3f235d4a1f391742bff}\label{group__GameManagerTests_ga988d7ec0db3be3f235d4a1f391742bff} 
+\index{GameManager Logic Tests@{GameManager Logic Tests}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!GameManager Logic Tests@{GameManager Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}}]{,  }\item[{Draw\+Card\+For\+Player}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000010}{Test}}]Ensures drawing a card adds to player\textquotesingle{}s hand and removes from deck. \end{DoxyRefDesc}
+\Hypertarget{group__GameManagerTests_ga246bed3cbcaff2cb79bdc66565e94f0b}\label{group__GameManagerTests_ga246bed3cbcaff2cb79bdc66565e94f0b} 
+\index{GameManager Logic Tests@{GameManager Logic Tests}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!GameManager Logic Tests@{GameManager Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}}]{,  }\item[{Initialize\+Decks}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000008}{Test}}]Ensures both player and AI decks are initialized with 10 cards. \end{DoxyRefDesc}

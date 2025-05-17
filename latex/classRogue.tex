@@ -1,0 +1,241 @@
+\doxysection{Rogue Class Reference}
+\hypertarget{classRogue}{}\label{classRogue}\index{Rogue@{Rogue}}
+
+
+A character card with moderate stats, often extended by subclasses like \doxylink{classThief}{Thief} or \doxylink{classAssassin}{Assassin}.  
+
+
+
+
+{\ttfamily \#include $<$Rogue.\+hpp$>$}
+
+
+
+Inheritance diagram for Rogue\+:
+% FIG 0
+
+
+Collaboration diagram for Rogue\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRogue_ad3d7665649e33c01bded7c6ec84239cb}{Rogue}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRogue}{Rogue} card. \end{DoxyCompactList}\item 
+\Hypertarget{classRogue_a4a98a96fb0afba5ad37982d35d3b8d69}\label{classRogue_a4a98a96fb0afba5ad37982d35d3b8d69} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Rogue} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRogue_a134e394987ed34b5493536e350f48dee}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRogue_a12483649ebb449e4f46938a71db573de}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the cost of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the attack value of the rogue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRogue_a2c3c98456309805a07065d3e9ef283d5}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the health value of the rogue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Activates the Rogue’s effect by summoning it to the battlefield. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A character card with moderate stats, often extended by subclasses like \doxylink{classThief}{Thief} or \doxylink{classAssassin}{Assassin}. 
+
+Inherits from \doxylink{classCharacterCard}{Character\+Card}. Rogues are typically fast, tactical units that may be used as a base for more complex subclasses with unique abilities (e.\+g., stealing, critical hits). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRogue_ad3d7665649e33c01bded7c6ec84239cb}\label{classRogue_ad3d7665649e33c01bded7c6ec84239cb} 
+\index{Rogue@{Rogue}!Rogue@{Rogue}}
+\index{Rogue@{Rogue}!Rogue@{Rogue}}
+\doxysubsubsection{\texorpdfstring{Rogue()}{Rogue()}}
+{\footnotesize\ttfamily Rogue\+::\+Rogue (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRogue}{Rogue} card. 
+
+Constructs a \doxylink{classRogue}{Rogue} character card.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the rogue. \\
+\hline
+{\em cost} & Resource cost to play the card. \\
+\hline
+{\em attack} & Attack value of the rogue. \\
+\hline
+{\em health} & Health value of the rogue.\\
+\hline
+{\em name} & The name of the rogue. \\
+\hline
+{\em cost} & The energy/mana cost to play this card. \\
+\hline
+{\em attack} & The attack value of the rogue. \\
+\hline
+{\em health} & The health value of the rogue. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86}\label{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86} 
+\index{Rogue@{Rogue}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Rogue@{Rogue}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Rogue\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the attack value of the rogue. 
+
+Retrieves the attack value of the \doxylink{classRogue}{Rogue} card.
+
+\begin{DoxyReturn}{Returns}
+Integer attack.
+
+Integer attack value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{Character\+Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classThief_ab598143aa68fb9ba21e3a0b20a28e721}{Thief}}.
+
+\Hypertarget{classRogue_a12483649ebb449e4f46938a71db573de}\label{classRogue_a12483649ebb449e4f46938a71db573de} 
+\index{Rogue@{Rogue}!getCost@{getCost}}
+\index{getCost@{getCost}!Rogue@{Rogue}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Rogue\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the cost of the card. 
+
+Retrieves the cost to play the \doxylink{classRogue}{Rogue} card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+Integer cost. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{Character\+Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classThief_a127e6625aa0d55a6b2242ecc98876c2a}{Thief}}.
+
+\Hypertarget{classRogue_a2c3c98456309805a07065d3e9ef283d5}\label{classRogue_a2c3c98456309805a07065d3e9ef283d5} 
+\index{Rogue@{Rogue}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Rogue@{Rogue}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Rogue\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the health value of the rogue. 
+
+Retrieves the health value of the \doxylink{classRogue}{Rogue} card.
+
+\begin{DoxyReturn}{Returns}
+Integer health.
+
+Integer health value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{Character\+Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classThief_a4cc1bb74d5318db451474480f0e6ed42}{Thief}}.
+
+\Hypertarget{classRogue_a134e394987ed34b5493536e350f48dee}\label{classRogue_a134e394987ed34b5493536e350f48dee} 
+\index{Rogue@{Rogue}!getName@{getName}}
+\index{getName@{getName}!Rogue@{Rogue}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Rogue\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the card. 
+
+Retrieves the name of the \doxylink{classRogue}{Rogue} card.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classCard}{Card} name as a string.
+
+Name as a string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{Character\+Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classThief_ab08a0b762c8997f9542fe3fa55bbb49b}{Thief}}.
+
+\Hypertarget{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}\label{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1} 
+\index{Rogue@{Rogue}!use@{use}}
+\index{use@{use}!Rogue@{Rogue}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Rogue\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activates the Rogue’s effect by summoning it to the battlefield. 
+
+Applies the effect of the \doxylink{classRogue}{Rogue} card.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling the game state.\\
+\hline
+\end{DoxyParams}
+Summons a character to the player\textquotesingle{}s battlefield when played.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} instance. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classThief_a37c92c1a41acfeac14321bdc5e849b3e}{Thief}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Rogue_8hpp}{Rogue.\+hpp}}\item 
+src/\mbox{\hyperlink{Rogue_8cpp}{Rogue.\+cpp}}\end{DoxyCompactItemize}

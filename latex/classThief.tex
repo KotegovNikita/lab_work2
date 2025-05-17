@@ -1,0 +1,222 @@
+\doxysection{Thief Class Reference}
+\hypertarget{classThief}{}\label{classThief}\index{Thief@{Thief}}
+
+
+A character card that represents a rogue who can steal cards from the opponent\textquotesingle{}s hand.  
+
+
+
+
+{\ttfamily \#include $<$Thief.\+hpp$>$}
+
+
+
+Inheritance diagram for Thief\+:
+% FIG 0
+
+
+Collaboration diagram for Thief\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classThief_a773f2f18d77d6479fdab6b8e6927265a}{Thief}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classThief}{Thief} character card. \end{DoxyCompactList}\item 
+\Hypertarget{classThief_a6212c451d196e4c2fe5426a2ad4441d3}\label{classThief_a6212c451d196e4c2fe5426a2ad4441d3} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Thief} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classThief_ab08a0b762c8997f9542fe3fa55bbb49b}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the card name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThief_a127e6625aa0d55a6b2242ecc98876c2a}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the cost of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThief_ab598143aa68fb9ba21e3a0b20a28e721}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the attack value of the \doxylink{classThief}{Thief}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThief_a4cc1bb74d5318db451474480f0e6ed42}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the health value of the \doxylink{classThief}{Thief}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThief_a37c92c1a41acfeac14321bdc5e849b3e}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Summons the \doxylink{classThief}{Thief} to the battlefield and attempts to steal a card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRogue}{Rogue}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRogue_ad3d7665649e33c01bded7c6ec84239cb}{Rogue}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRogue}{Rogue} card. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Rogue} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A character card that represents a rogue who can steal cards from the opponent\textquotesingle{}s hand. 
+
+Inherits from \doxylink{classRogue}{Rogue}. When summoned, the \doxylink{classThief}{Thief} attempts to randomly steal a non-\/\+Thief card from the opponent\textquotesingle{}s hand and add it to the player\textquotesingle{}s hand. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classThief_a773f2f18d77d6479fdab6b8e6927265a}\label{classThief_a773f2f18d77d6479fdab6b8e6927265a} 
+\index{Thief@{Thief}!Thief@{Thief}}
+\index{Thief@{Thief}!Thief@{Thief}}
+\doxysubsubsection{\texorpdfstring{Thief()}{Thief()}}
+{\footnotesize\ttfamily Thief\+::\+Thief (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classThief}{Thief} character card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The cost to play this card. \\
+\hline
+{\em attack} & The attack value of the \doxylink{classThief}{Thief}. \\
+\hline
+{\em health} & The health value of the \doxylink{classThief}{Thief}.\\
+\hline
+{\em name} & Name of the card. \\
+\hline
+{\em cost} & Resource cost to play this card. \\
+\hline
+{\em attack} & Attack value (usually unused for \doxylink{classThief}{Thief} itself). \\
+\hline
+{\em health} & Health value (usually unused for \doxylink{classThief}{Thief} itself). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classThief_ab598143aa68fb9ba21e3a0b20a28e721}\label{classThief_ab598143aa68fb9ba21e3a0b20a28e721} 
+\index{Thief@{Thief}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Thief@{Thief}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Thief\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the attack value of the \doxylink{classThief}{Thief}. 
+
+\begin{DoxyReturn}{Returns}
+Integer attack.
+
+Attack as integer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86}{Rogue}}.
+
+\Hypertarget{classThief_a127e6625aa0d55a6b2242ecc98876c2a}\label{classThief_a127e6625aa0d55a6b2242ecc98876c2a} 
+\index{Thief@{Thief}!getCost@{getCost}}
+\index{getCost@{getCost}!Thief@{Thief}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Thief\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the cost of the card. 
+
+Gets the cost to play this card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classRogue_a12483649ebb449e4f46938a71db573de}{Rogue}}.
+
+\Hypertarget{classThief_a4cc1bb74d5318db451474480f0e6ed42}\label{classThief_a4cc1bb74d5318db451474480f0e6ed42} 
+\index{Thief@{Thief}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Thief@{Thief}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Thief\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the health value of the \doxylink{classThief}{Thief}. 
+
+\begin{DoxyReturn}{Returns}
+Integer health.
+
+Health as integer. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classRogue_a2c3c98456309805a07065d3e9ef283d5}{Rogue}}.
+
+\Hypertarget{classThief_ab08a0b762c8997f9542fe3fa55bbb49b}\label{classThief_ab08a0b762c8997f9542fe3fa55bbb49b} 
+\index{Thief@{Thief}!getName@{getName}}
+\index{getName@{getName}!Thief@{Thief}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Thief\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the card name. 
+
+Gets the name of the \doxylink{classThief}{Thief} card.
+
+\begin{DoxyReturn}{Returns}
+Name as a string.
+
+Name string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classRogue_a134e394987ed34b5493536e350f48dee}{Rogue}}.
+
+\Hypertarget{classThief_a37c92c1a41acfeac14321bdc5e849b3e}\label{classThief_a37c92c1a41acfeac14321bdc5e849b3e} 
+\index{Thief@{Thief}!use@{use}}
+\index{use@{use}!Thief@{Thief}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Thief\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Summons the \doxylink{classThief}{Thief} to the battlefield and attempts to steal a card. 
+
+Activates the \doxylink{classThief}{Thief} card.
+
+If the opponent has any non-\/\+Thief cards in hand, one is randomly selected and transferred to the Thief’s controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling game state.\\
+\hline
+\end{DoxyParams}
+When used, the \doxylink{classThief}{Thief} is summoned to the battlefield with stats (1 ATK, 1 HP), and attempts to steal a random non-\/\+Thief card from the opponent’s hand. If only Thieves are in the hand, or the opponent has no cards, the ability fails silently.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the current \doxylink{classGameManager}{Game\+Manager} controlling the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}{Rogue}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Thief_8hpp}{Thief.\+hpp}}\item 
+src/\mbox{\hyperlink{Thief_8cpp}{Thief.\+cpp}}\end{DoxyCompactItemize}

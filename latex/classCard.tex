@@ -1,0 +1,107 @@
+\doxysection{Card Class Reference}
+\hypertarget{classCard}{}\label{classCard}\index{Card@{Card}}
+
+
+Abstract base class representing any playable card in the game.  
+
+
+
+
+{\ttfamily \#include $<$Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Card\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the name of the card. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{get\+Cost}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the cost to play this card. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm)=0
+\begin{DoxyCompactList}\small\item\em Activates the card\textquotesingle{}s effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing any playable card in the game. 
+
+All card types—characters, abilities, attacks, supports—inherit from this interface. Each card must implement methods to provide its name, cost, and usage behavior. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}\label{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9} 
+\index{Card@{Card}!````~Card@{\texorpdfstring{$\sim$}{\string~}Card}}
+\index{````~Card@{\texorpdfstring{$\sim$}{\string~}Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Card()}{\string~Card()}}
+{\footnotesize\ttfamily virtual Card\+::\texorpdfstring{$\sim$}{\string~}\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+Allows safe polymorphic deletion of derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCard_ac7b96ae42dbaa29bc701021802df03f6}\label{classCard_ac7b96ae42dbaa29bc701021802df03f6} 
+\index{Card@{Card}!getCost@{getCost}}
+\index{getCost@{getCost}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily virtual int Card\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the cost to play this card. 
+
+\begin{DoxyReturn}{Returns}
+An integer cost value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAbilityCard_af4b2d0a189b892821c777d2cc89ae911}{Ability\+Card}}, \mbox{\hyperlink{classAssassin_a740c39b052cf139cc4c729b34126cc55}{Assassin}}, \mbox{\hyperlink{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1}{Attack\+Card}}, \mbox{\hyperlink{classBerserk_afb0b589e31af9a2f6a4bd49f4f1a6bac}{Berserk}}, \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{Character\+Card}}, \mbox{\hyperlink{classElementalist_a886b8b930bd9c33cecd1a5b3ebfb56a4}{Elementalist}}, \mbox{\hyperlink{classKnight_acc1a23e8a79757551b66e3a72f47a25f}{Knight}}, \mbox{\hyperlink{classRogue_a12483649ebb449e4f46938a71db573de}{Rogue}}, \mbox{\hyperlink{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}{Support\+Card}}, \mbox{\hyperlink{classThief_a127e6625aa0d55a6b2242ecc98876c2a}{Thief}}, \mbox{\hyperlink{classWarlock_a93fead47f6372182157e41ae7e2a8b57}{Warlock}}, and \mbox{\hyperlink{classTestCard_affd85860cdb7a7622972bfae302e1ecd}{Test\+Card}}.
+
+\Hypertarget{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}\label{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd} 
+\index{Card@{Card}!getName@{getName}}
+\index{getName@{getName}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the name of the card. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the card\textquotesingle{}s name. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAbilityCard_a5e7ccdf36edc6ac1e082f79370522df6}{Ability\+Card}}, \mbox{\hyperlink{classAssassin_a60413b97f3fc6be837e53a29ef27d075}{Assassin}}, \mbox{\hyperlink{classAttackCard_a1ac161818357743ae17e9456d1ce480f}{Attack\+Card}}, \mbox{\hyperlink{classBerserk_aa540ce0b5f993dc88da9c7139e7196f5}{Berserk}}, \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{Character\+Card}}, \mbox{\hyperlink{classElementalist_a7269cddac19d97d71221fd8ec1dbc8c0}{Elementalist}}, \mbox{\hyperlink{classKnight_a86bc5c7236da42c8e2409b4d83b24cbb}{Knight}}, \mbox{\hyperlink{classRogue_a134e394987ed34b5493536e350f48dee}{Rogue}}, \mbox{\hyperlink{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}{Support\+Card}}, \mbox{\hyperlink{classThief_ab08a0b762c8997f9542fe3fa55bbb49b}{Thief}}, \mbox{\hyperlink{classWarlock_ab470dd89dd46b8a8dd2fbda67c8fc9d5}{Warlock}}, and \mbox{\hyperlink{classTestCard_abe540ec5c71d7fd23191710fa92ce9f4}{Test\+Card}}.
+
+\Hypertarget{classCard_adb4dc1738325ee2b53eac1ee7df4249e}\label{classCard_adb4dc1738325ee2b53eac1ee7df4249e} 
+\index{Card@{Card}!use@{use}}
+\index{use@{use}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily virtual void Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Activates the card\textquotesingle{}s effect. 
+
+This pure virtual function must be implemented by derived classes to define what happens when the card is played.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the current game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classTestCard_a26dee1c84d45dbca5c7bbe70f675e1b7}{Test\+Card}}, \mbox{\hyperlink{classTestCharacterCard_aecebd1277c70f2a619a2cce465564024}{Test\+Character\+Card}}, \mbox{\hyperlink{classTestAbilityCard_a1453a7ee666056c013049fb5687a3f96}{Test\+Ability\+Card}}, \mbox{\hyperlink{classTestAttackCard_ae3e484e84d0bcfdc8f314fdffade1502}{Test\+Attack\+Card}}, \mbox{\hyperlink{classTestSupportCard_a9bcb581a42eaf3e3212144f85393ab7c}{Test\+Support\+Card}}, \mbox{\hyperlink{classAssassin_a4b512a7ab07a00c932bcecab48d49f0c}{Assassin}}, \mbox{\hyperlink{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911}{Attack\+Card}}, \mbox{\hyperlink{classBarrier_af952d092c4aef167ae1a2bf784a895d3}{Barrier}}, \mbox{\hyperlink{classBerserk_a08c0d8e233774744dd56ff6ce2cb51a0}{Berserk}}, \mbox{\hyperlink{classElementalist_a6792e7d612c678e2f1954334e5d70ba7}{Elementalist}}, \mbox{\hyperlink{classFlameWave_a7050a68dd4e34481bae2d34ccf81c178}{Flame\+Wave}}, \mbox{\hyperlink{classKnight_ae9ddff6e38c6de81ab2de0bd2b8e0c92}{Knight}}, \mbox{\hyperlink{classLightning__strike_a0fb3893331ff718184c7ec30ae35b07f}{Lightning\+\_\+strike}}, \mbox{\hyperlink{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}{Rogue}}, \mbox{\hyperlink{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}{Support\+Card}}, \mbox{\hyperlink{classThief_a37c92c1a41acfeac14321bdc5e849b3e}{Thief}}, \mbox{\hyperlink{classWarlock_ac7520514cfa0ab320cef69ae997adea7}{Warlock}}, and \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Card_8hpp}{Card.\+hpp}}\end{DoxyCompactItemize}

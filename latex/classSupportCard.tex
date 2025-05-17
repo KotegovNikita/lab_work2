@@ -1,0 +1,168 @@
+\doxysection{Support\+Card Class Reference}
+\hypertarget{classSupportCard}{}\label{classSupportCard}\index{SupportCard@{SupportCard}}
+
+
+Abstract base class for cards that apply beneficial effects (healing, buffs) to allies.  
+
+
+
+
+{\ttfamily \#include $<$Support\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Support\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Support\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSupportCard_a562738edad1adf3689e463ac06b90b29}{Support\+Card}} (const std\+::string \&name, int cost, int power)
+\begin{DoxyCompactList}\small\item\em Constructs a support card. \end{DoxyCompactList}\item 
+\Hypertarget{classSupportCard_af4275a4c66f535e5837b5ae1b7b052c0}\label{classSupportCard_af4275a4c66f535e5837b5ae1b7b052c0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Support\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the support card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play the card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Executes the card’s effect (to be overridden in derived classes). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSupportCard_af609da13d5293e95d45b659a29a98301}\label{classSupportCard_af609da13d5293e95d45b659a29a98301} 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+\Hypertarget{classSupportCard_a3cee006f3372e49d8aa2a3c3c7bfea2b}\label{classSupportCard_a3cee006f3372e49d8aa2a3c3c7bfea2b} 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+\Hypertarget{classSupportCard_ad4addf26e25e03540743ccdb3cedede6}\label{classSupportCard_ad4addf26e25e03540743ccdb3cedede6} 
+int {\bfseries m\+\_\+power}
+\begin{DoxyCompactList}\small\item\em Effect strength (e.\+g., healing amount or shield value) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for cards that apply beneficial effects (healing, buffs) to allies. 
+
+Inherits from \doxylink{classCard}{Card}. Provides shared fields and methods for all support-\/type cards. Specific effects must be implemented in derived classes like \doxylink{classHeal}{Heal} or \doxylink{classBarrier}{Barrier}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSupportCard_a562738edad1adf3689e463ac06b90b29}\label{classSupportCard_a562738edad1adf3689e463ac06b90b29} 
+\index{SupportCard@{SupportCard}!SupportCard@{SupportCard}}
+\index{SupportCard@{SupportCard}!SupportCard@{SupportCard}}
+\doxysubsubsection{\texorpdfstring{SupportCard()}{SupportCard()}}
+{\footnotesize\ttfamily Support\+Card\+::\+Support\+Card (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{power }\end{DoxyParamCaption})}
+
+
+
+Constructs a support card. 
+
+Constructs a support card with the given name, cost, and power.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the card. \\
+\hline
+{\em cost} & Resource cost to play the card. \\
+\hline
+{\em power} & The magnitude of the effect.\\
+\hline
+{\em name} & The name of the support card. \\
+\hline
+{\em cost} & The resource cost to play the card. \\
+\hline
+{\em power} & The effect power (e.\+g. healing amount, shield strength, etc.). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}\label{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0} 
+\index{SupportCard@{SupportCard}!getCost@{getCost}}
+\index{getCost@{getCost}!SupportCard@{SupportCard}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Support\+Card\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the cost to play the card. 
+
+Gets the cost to play this card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+Integer cost. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+\Hypertarget{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}\label{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac} 
+\index{SupportCard@{SupportCard}!getName@{getName}}
+\index{getName@{getName}!SupportCard@{SupportCard}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Support\+Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name of the support card. 
+
+Gets the name of the support card.
+
+\begin{DoxyReturn}{Returns}
+String name.
+
+The name as a string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+\Hypertarget{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}\label{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c} 
+\index{SupportCard@{SupportCard}!use@{use}}
+\index{use@{use}!SupportCard@{SupportCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Support\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the card’s effect (to be overridden in derived classes). 
+
+Base implementation of the use effect for support cards.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} instance.\\
+\hline
+\end{DoxyParams}
+This version only prints a message. Derived classes should override this method to implement actual in-\/game effects like healing or buffs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTestSupportCard_a9bcb581a42eaf3e3212144f85393ab7c}{Test\+Support\+Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{SupportCard_8hpp}{Support\+Card.\+hpp}}\item 
+src/\mbox{\hyperlink{SupportCard_8cpp}{Support\+Card.\+cpp}}\end{DoxyCompactItemize}
