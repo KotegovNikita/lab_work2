@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/my_game_tests.dir/tests/test_card_logic.cpp.o CMakeFiles/my_game_tests.dir/tests/test_characters.cpp.o CMakeFiles/my_game_tests.dir/tests/test_gamemanager.cpp.o -o my_game_tests  libmy_game_lib.a lib/libgtest_main.a -lpthread lib/libgtest.a 

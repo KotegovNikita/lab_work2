@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/my_game.dir/src/main.cpp.o -o my_game  libmy_game_lib.a 
