@@ -1,1 +1,10 @@
+# CMake build
+build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Doxygen output
 html/
+latex/
