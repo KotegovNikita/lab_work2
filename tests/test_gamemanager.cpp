@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file test_gamemanager.cpp
  * @brief Unit tests for the GameManager class, covering deck logic, hand mechanics, game over checks, and AI behavior.

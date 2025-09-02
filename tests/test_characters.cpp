@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file test_character_logic.cpp
  * @brief Unit tests for character logic, including special effects by type (e.g., Knight, Berserk, Thief).

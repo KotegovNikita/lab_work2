@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file Thief.cpp
  * @brief Implementation of the Thief class, a Rogue-type character card that can steal a card from the opponent.

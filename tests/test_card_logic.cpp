@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file test_card_logic.cpp
  * @brief Unit tests for card types (CharacterCard, AbilityCard, AttackCard, SupportCard, and their derivatives).

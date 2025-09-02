@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file GameManager.cpp
  * @brief Implementation of the GameManager class – the central coordinator of a console‑based

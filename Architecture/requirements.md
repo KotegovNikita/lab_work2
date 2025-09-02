@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 Functional Requirements
 
  - The player must be able to:
@@ -22,18 +23,16 @@ Scenario 1: Start of the game
 
   1)Player starts the game.
 
-  2)Gets 5 cards in his hand.
+  2)Gets 10 cards in his hand.
 
   3)Starts a turn.
 
 Scenario 2: Player's turn
  - Who moves: Player.
 
-  1)Selects a character card and plays it.
+  1)Selects a character or an ability card and plays it.
 
-  2)Selects an ability and uses it.
-
-  3)Ends the turn.
+  2)Ends the turn.
 
 Scenario 3: AI Action
 

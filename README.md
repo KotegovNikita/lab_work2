@@ -21,9 +21,8 @@ The player controls a deck of cards consisting of character and ability cards. D
 5. **Attack phase**: If both sides have characters on the field, you’ll be prompted:  
    `Attack? (y/n)`  
    - If you choose **y**, select your attacker index and then target index.  
-6. **Game end**: The game repeats until one of the following occurs:  
-   - Both hands and decks are empty.  
-   - One side has no characters on the field.
+6. **Game end**: The game continues until no player has any cards left (the player has nothing to attack or save with)  
+    
 
 ## Build and Run
 

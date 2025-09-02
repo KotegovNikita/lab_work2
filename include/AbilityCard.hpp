@@ -1,3 +1,5 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
+
 #ifndef ABILITY_CARD_HPP
 #define ABILITY_CARD_HPP
 

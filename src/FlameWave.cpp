@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file FlameWave.cpp
  * @brief Implementation of the FlameWave attack card that damages all enemy characters.

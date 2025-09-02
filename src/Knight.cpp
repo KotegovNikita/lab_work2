@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file Knight.cpp
  * @brief Implementation of the Knight class, a specific type of Warrior character card.

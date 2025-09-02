@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file Lightning_strike.cpp
  * @brief Implementation of the Lightning_strike class – an offensive spell card.

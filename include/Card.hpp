@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 #ifndef CARD_HPP
 #define CARD_HPP
 

@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file Warrior.cpp
  * @brief Implementation of the Warrior class, a specific subclass of CharacterCard.

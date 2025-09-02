@@ -1,3 +1,4 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
 /**
  * @file Warlock.cpp
  * @brief Implementation of the Warlock class, a Mage-type character card with potential for advanced effects.
