@@ -1,0 +1,104 @@
+\doxysection{Warrior Class Reference}
+\hypertarget{classWarrior}{}\label{classWarrior}\index{Warrior@{Warrior}}
+
+
+Represents a strong melee-\/based character card.  
+
+
+
+
+{\ttfamily \#include $<$Warrior.\+hpp$>$}
+
+
+
+Inheritance diagram for Warrior\+:
+% FIG 0
+
+
+Collaboration diagram for Warrior\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWarrior_a15b60510dfaae1f4dc0fdb578f2549a5}{Warrior}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWarrior}{Warrior} character card. \end{DoxyCompactList}\item 
+\Hypertarget{classWarrior_a4b2d2ba1496d5491250491f1568f8ee9}\label{classWarrior_a4b2d2ba1496d5491250491f1568f8ee9} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Warrior} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{get\+Attack}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the attack value of the character. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{get\+Health}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the health value of the character. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm)=0
+\begin{DoxyCompactList}\small\item\em Defines the effect of using the card (typically summoning a character to the field). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play this card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a strong melee-\/based character card. 
+
+Inherits from \doxylink{classCharacterCard}{Character\+Card}. The \doxylink{classWarrior}{Warrior} class serves as a base for physical fighters like \doxylink{classKnight}{Knight} or \doxylink{classBerserk}{Berserk}, and can be extended with special traits such as rage, defense, or armor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classWarrior_a15b60510dfaae1f4dc0fdb578f2549a5}\label{classWarrior_a15b60510dfaae1f4dc0fdb578f2549a5} 
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\index{Warrior@{Warrior}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{Warrior()}{Warrior()}}
+{\footnotesize\ttfamily Warrior\+::\+Warrior (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classWarrior}{Warrior} character card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the warrior. \\
+\hline
+{\em cost} & Cost to play the card. \\
+\hline
+{\em attack} & Attack value of the warrior. \\
+\hline
+{\em health} & Health value of the warrior.\\
+\hline
+{\em name} & The name of the warrior card. \\
+\hline
+{\em cost} & The cost to play this card. \\
+\hline
+{\em attack} & The attack power of the warrior. \\
+\hline
+{\em health} & The health points of the warrior. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Warrior_8hpp}{Warrior.\+hpp}}\item 
+src/\mbox{\hyperlink{Warrior_8cpp}{Warrior.\+cpp}}\end{DoxyCompactItemize}

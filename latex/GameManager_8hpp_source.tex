@@ -1,0 +1,92 @@
+\doxysection{Game\+Manager.\+hpp}
+\hypertarget{GameManager_8hpp_source}{}\label{GameManager_8hpp_source}\index{include/GameManager.hpp@{include/GameManager.hpp}}
+\mbox{\hyperlink{GameManager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_MANAGER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_MANAGER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Card_8hpp}{Card.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Character_8hpp}{Character.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CharacterCard_8hpp}{CharacterCard.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AbilityCard_8hpp}{AbilityCard.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGameManager}{GameManager}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_aiTurnCount\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_gameOver\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_playerTurn\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\ m\_playerDeck;\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\ m\_aiDeck;\ \ \ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\ m\_playerHand;\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\ m\_aiHand;\ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Character>\ m\_playerField;\ \ }
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<Character>\ m\_aiField;\ \ \ \ \ \ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classGameManager_aa0e2424dc1a39d380e5b6605b179bf05}{GameManager}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classGameManager_aaae63e38e358379c1fe507c5197a8435}{\string~GameManager}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_ae272eb0bf4e4987797fcff97723819cc}{startGame}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a8245fff2b62597f06f1418bea8032c7e}{initializePlayerDeck}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a7125281b77819d82bb83bf24ad696c2f}{initializeAIDeck}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a32111a6b944a350ecc3251e305e6e85f}{dealCards}}(\textcolor{keywordtype}{int}\ count,\ std::vector<std::unique\_ptr<Card>>\&\ hand,\ std::vector<std::unique\_ptr<Card>>\&\ deck);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a10df3da371d817f2b4ad317b1dc583f8}{ensureMinimumAbilityCards}}(std::vector<std::unique\_ptr<Card>>\&\ hand,\ std::vector<std::unique\_ptr<Card>>\&\ deck);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a3a02f2e3835820c50581946047cedbfe}{runTurn}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGameManager_a8d4c015a3785398b218b158c77016854}{isGameOver}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a7b4ae9d6a8a1a2943adcf79468af2860}{checkGameOver}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::string\ \mbox{\hyperlink{classGameManager_ad1956e4beebb592d276a55b43ed65157}{determineWinner}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a9f0397746c1918d5fe2c961716d3c55e}{drawCardForPlayer}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a07631ea35ad39b55a809c6e7bfa4db2c}{drawCardForAI}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGameManager_ab02ec04ad3a1582dd870a50ec73c032b}{isPlayerTurn}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a76f8cedae73cbcc7881a21e5a395fc8d}{addPlayerCharacter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCharacter}{Character}}\&\ character);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_ac7924b5fcd7468c39e59777dec596fc8}{addAICharacter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCharacter}{Character}}\&\ character);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGameManager_a8aaf4a26c0b0814330bcdbcf6d681a56}{aiMakeMove}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGameManager_a318d0a15d073d1c5bf06516587976bca}{findCharacterCardAIHand}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGameManager_a573fc7dcdf152fd8f21ef13dba2afade}{findAttackCardInAIHand}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGameManager_a1f33dd448c5f505e9ed6d39c1827a944}{findSupportCardAIHand}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGameManager_a18b4e1b2d28de522b29efc4028ef5714}{checkAIAnyDamagedAlly}}();}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGameManager_ab6b9924270bdd1a864d147cf817b3949}{findStrongEnemy}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\&\ \mbox{\hyperlink{classGameManager_aa8ad3f58d9c007af8ac5ce8a1c924335}{getPlayerDeck}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\&\ \mbox{\hyperlink{classGameManager_a7e0400f24f16e087efa1ae69b79eff2a}{getAIDeck}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\&\ \mbox{\hyperlink{classGameManager_a08946c3f678c6de4e39b6d81cda76b24}{getPlayerHand}}();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \ \ \ \ std::vector<std::unique\_ptr<Card>>\&\ \mbox{\hyperlink{classGameManager_a1f2df7fbf6aebe2e215497ff5dbddf12}{getAIHand}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \ \ \ \ std::vector<Character>\&\ \mbox{\hyperlink{classGameManager_aadf4d4a94ce8bdbd1bc0e4578716a77c}{getPlayerField}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \ \ \ \ std::vector<Character>\&\ \mbox{\hyperlink{classGameManager_acf0218a2e830a3afbb3e991bf9398b53}{getAIField}}();}
+\DoxyCodeLine{00186\ \};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAME\_MANAGER\_HPP}}
+\DoxyCodeLine{00189\ }
+
+\end{DoxyCode}

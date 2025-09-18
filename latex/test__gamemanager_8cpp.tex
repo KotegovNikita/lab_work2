@@ -1,0 +1,43 @@
+\doxysection{tests/test\+\_\+gamemanager.cpp File Reference}
+\hypertarget{test__gamemanager_8cpp}{}\label{test__gamemanager_8cpp}\index{tests/test\_gamemanager.cpp@{tests/test\_gamemanager.cpp}}
+
+
+Unit tests for the \doxylink{classGameManager}{Game\+Manager} class, covering deck logic, hand mechanics, game over checks, and AI behavior.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include "{}Game\+Manager.\+hpp"{}}\newline
+{\ttfamily \#include "{}Card.\+hpp"{}}\newline
+{\ttfamily \#include "{}Thief.\+hpp"{}}\newline
+{\ttfamily \#include "{}Lightning\+\_\+strike.\+hpp"{}}\newline
+{\ttfamily \#include "{}Flame\+Wave.\+hpp"{}}\newline
+{\ttfamily \#include "{}Heal.\+hpp"{}}\newline
+{\ttfamily \#include "{}Barrier.\+hpp"{}}\newline
+{\ttfamily \#include "{}Ability\+Card.\+hpp"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for test\+\_\+gamemanager.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}
+\begin{DoxyCompactList}\small\item\em Test fixture for Game\+Manager-\/based tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga246bed3cbcaff2cb79bdc66565e94f0b}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Initialize\+Decks)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga50cc8471d616c584617d62c2117c7d86}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Deal\+Cards\+Check\+Limits)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga988d7ec0db3be3f235d4a1f391742bff}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Draw\+Card\+For\+Player)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_ga015e4677128b17eba05dbc26dcd26e57}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Check\+Game\+Over\+And\+Determine\+Winner\+Empty)
+\item 
+\mbox{\hyperlink{group__GameManagerTests_gab82cd0a31c92851059ab9b62151cad95}{TEST\+\_\+F}} (\mbox{\hyperlink{classGameManagerTest}{Game\+Manager\+Test}}, Ai\+Make\+Move\+Non\+Empty\+Hand)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit tests for the \doxylink{classGameManager}{Game\+Manager} class, covering deck logic, hand mechanics, game over checks, and AI behavior. 
+
+These tests validate core functionality of the turn-\/based card engine, focusing on card dealing, turn progression, and end-\/game evaluation. 

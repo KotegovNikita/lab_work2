@@ -1,3 +1,5 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
+
 1. Testing plan
 
 1.1 Test objects

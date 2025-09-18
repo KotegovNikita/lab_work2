@@ -1,0 +1,78 @@
+\doxysection{tests/test\+\_\+card\+\_\+logic.cpp File Reference}
+\hypertarget{test__card__logic_8cpp}{}\label{test__card__logic_8cpp}\index{tests/test\_card\_logic.cpp@{tests/test\_card\_logic.cpp}}
+
+
+Unit tests for card types (\doxylink{classCharacterCard}{Character\+Card}, \doxylink{classAbilityCard}{Ability\+Card}, \doxylink{classAttackCard}{Attack\+Card}, \doxylink{classSupportCard}{Support\+Card}, and their derivatives).  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include "{}Card.\+hpp"{}}\newline
+{\ttfamily \#include "{}Character\+Card.\+hpp"{}}\newline
+{\ttfamily \#include "{}Ability\+Card.\+hpp"{}}\newline
+{\ttfamily \#include "{}Attack\+Card.\+hpp"{}}\newline
+{\ttfamily \#include "{}Support\+Card.\+hpp"{}}\newline
+{\ttfamily \#include "{}Barrier.\+hpp"{}}\newline
+{\ttfamily \#include "{}Heal.\+hpp"{}}\newline
+{\ttfamily \#include "{}Flame\+Wave.\+hpp"{}}\newline
+{\ttfamily \#include "{}Lightning\+\_\+strike.\+hpp"{}}\newline
+{\ttfamily \#include "{}Elementalist.\+hpp"{}}\newline
+{\ttfamily \#include "{}Warlock.\+hpp"{}}\newline
+{\ttfamily \#include "{}Thief.\+hpp"{}}\newline
+{\ttfamily \#include "{}Berserk.\+hpp"{}}\newline
+{\ttfamily \#include "{}Knight.\+hpp"{}}\newline
+{\ttfamily \#include "{}Assassin.\+hpp"{}}\newline
+{\ttfamily \#include "{}Game\+Manager.\+hpp"{}}\newline
+Include dependency graph for test\+\_\+card\+\_\+logic.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTestCard}{Test\+Card}}
+\begin{DoxyCompactList}\small\item\em Test implementation of pure virtual \doxylink{classCard}{Card}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTestCharacterCard}{Test\+Character\+Card}}
+\begin{DoxyCompactList}\small\item\em Test implementation of \doxylink{classCharacterCard}{Character\+Card}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTestAbilityCard}{Test\+Ability\+Card}}
+\begin{DoxyCompactList}\small\item\em Test implementation of \doxylink{classAbilityCard}{Ability\+Card}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTestAttackCard}{Test\+Attack\+Card}}
+\begin{DoxyCompactList}\small\item\em Test implementation of \doxylink{classAttackCard}{Attack\+Card}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTestSupportCard}{Test\+Support\+Card}}
+\begin{DoxyCompactList}\small\item\em Test implementation of \doxylink{classSupportCard}{Support\+Card}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Barrier\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Heal\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Flame\+Wave\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Lightning\+Strike\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Elementalist\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Warlock\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Thief\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Berserk\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Knight\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Assassin\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Card\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Character\+Card\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Ability\+Card\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Attack\+Card\+Basic)
+\item 
+{\bfseries TEST} (Card\+Logic\+Test, Support\+Card\+Basic)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit tests for card types (\doxylink{classCharacterCard}{Character\+Card}, \doxylink{classAbilityCard}{Ability\+Card}, \doxylink{classAttackCard}{Attack\+Card}, \doxylink{classSupportCard}{Support\+Card}, and their derivatives). 
+
+This test suite uses Google\+Test to verify basic behavior of individual card classes. Each test validates constructor data (name, cost, etc.) and ensures that {\ttfamily use(\doxylink{classGameManager}{Game\+Manager}\&)} does not throw. 

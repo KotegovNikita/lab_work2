@@ -1,0 +1,489 @@
+\doxysection{Game\+Manager Class Reference}
+\hypertarget{classGameManager}{}\label{classGameManager}\index{GameManager@{GameManager}}
+
+
+Core controller of the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGameManager_aa0e2424dc1a39d380e5b6605b179bf05}{Game\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classGameManager}{Game\+Manager} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGameManager_aaae63e38e358379c1fe507c5197a8435}{\texorpdfstring{$\sim$}{\string~}\+Game\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classGameManager}{Game\+Manager}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_ae272eb0bf4e4987797fcff97723819cc}{start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Starts a new game\+: initializes decks and hands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a8245fff2b62597f06f1418bea8032c7e}{initialize\+Player\+Deck}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the player\textquotesingle{}s deck. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a7125281b77819d82bb83bf24ad696c2f}{initialize\+AIDeck}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the AI\textquotesingle{}s deck. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a32111a6b944a350ecc3251e305e6e85f}{deal\+Cards}} (int count, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&hand, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&deck)
+\begin{DoxyCompactList}\small\item\em Deals up to {\ttfamily count} cards from {\ttfamily deck} into {\ttfamily hand}, respecting hand composition rules. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a10df3da371d817f2b4ad317b1dc583f8}{ensure\+Minimum\+Ability\+Cards}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&hand, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&deck)
+\begin{DoxyCompactList}\small\item\em Ensures that a hand contains at least two ability cards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a3a02f2e3835820c50581946047cedbfe}{run\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Executes a full turn\+: player move, AI move, optional combat. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGameManager_a8d4c015a3785398b218b158c77016854}{is\+Game\+Over}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the game has ended. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a7b4ae9d6a8a1a2943adcf79468af2860}{check\+Game\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Checks win/loss/draw conditions and updates internal state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGameManager_ad1956e4beebb592d276a55b43ed65157}{determine\+Winner}} ()
+\begin{DoxyCompactList}\small\item\em Determines the winner and returns a result string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a9f0397746c1918d5fe2c961716d3c55e}{draw\+Card\+For\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Draws one card for the player, if possible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a07631ea35ad39b55a809c6e7bfa4db2c}{draw\+Card\+For\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Draws one card for the AI, if possible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGameManager_ab02ec04ad3a1582dd870a50ec73c032b}{is\+Player\+Turn}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if it is currently the player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a76f8cedae73cbcc7881a21e5a395fc8d}{add\+Player\+Character}} (const \mbox{\hyperlink{classCharacter}{Character}} \&character)
+\begin{DoxyCompactList}\small\item\em Adds a summoned character to the player\textquotesingle{}s field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_ac7924b5fcd7468c39e59777dec596fc8}{add\+AICharacter}} (const \mbox{\hyperlink{classCharacter}{Character}} \&character)
+\begin{DoxyCompactList}\small\item\em Adds a summoned character to the AI\textquotesingle{}s field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGameManager_a8aaf4a26c0b0814330bcdbcf6d681a56}{ai\+Make\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Runs the AI\textquotesingle{}s decision-\/making logic for its turn. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGameManager_a318d0a15d073d1c5bf06516587976bca}{find\+Character\+Card\+AIHand}} ()
+\begin{DoxyCompactList}\small\item\em Searches for a character card in the AI\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGameManager_a573fc7dcdf152fd8f21ef13dba2afade}{find\+Attack\+Card\+In\+AIHand}} ()
+\begin{DoxyCompactList}\small\item\em Searches for an attack card in the AI\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGameManager_a1f33dd448c5f505e9ed6d39c1827a944}{find\+Support\+Card\+AIHand}} ()
+\begin{DoxyCompactList}\small\item\em Searches for a support card in the AI\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGameManager_a18b4e1b2d28de522b29efc4028ef5714}{check\+AIAny\+Damaged\+Ally}} ()
+\begin{DoxyCompactList}\small\item\em Checks if any AI-\/controlled character is damaged. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGameManager_ab6b9924270bdd1a864d147cf817b3949}{find\+Strong\+Enemy}} ()
+\begin{DoxyCompactList}\small\item\em Locates a strong enemy unit (ATK ≥ 4). \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& \mbox{\hyperlink{classGameManager_aa8ad3f58d9c007af8ac5ce8a1c924335}{get\+Player\+Deck}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the player\textquotesingle{}s deck. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& \mbox{\hyperlink{classGameManager_a7e0400f24f16e087efa1ae69b79eff2a}{get\+AIDeck}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the AI\textquotesingle{}s deck. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& \mbox{\hyperlink{classGameManager_a08946c3f678c6de4e39b6d81cda76b24}{get\+Player\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the player\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& \mbox{\hyperlink{classGameManager_a1f2df7fbf6aebe2e215497ff5dbddf12}{get\+AIHand}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the AI\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCharacter}{Character}} $>$ \& \mbox{\hyperlink{classGameManager_aadf4d4a94ce8bdbd1bc0e4578716a77c}{get\+Player\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the player\textquotesingle{}s characters on the battlefield. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCharacter}{Character}} $>$ \& \mbox{\hyperlink{classGameManager_acf0218a2e830a3afbb3e991bf9398b53}{get\+AIField}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the AI\textquotesingle{}s characters on the battlefield. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core controller of the game. 
+
+Responsible for managing the game state, including decks, hands, fields, turn flow, and win conditions. Provides public interfaces for cards to interact with the board and handles logic for both player and AI turns. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGameManager_aa0e2424dc1a39d380e5b6605b179bf05}\label{classGameManager_aa0e2424dc1a39d380e5b6605b179bf05} 
+\index{GameManager@{GameManager}!GameManager@{GameManager}}
+\index{GameManager@{GameManager}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GameManager()}{GameManager()}}
+{\footnotesize\ttfamily Game\+Manager\+::\+Game\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructs a new \doxylink{classGameManager}{Game\+Manager} instance. 
+
+Default constructor.
+
+At this stage the constructor does not need to perform any work because most heavy initialisation is deferred to the \doxylink{classGameManager_ae272eb0bf4e4987797fcff97723819cc}{start\+Game} method. \Hypertarget{classGameManager_aaae63e38e358379c1fe507c5197a8435}\label{classGameManager_aaae63e38e358379c1fe507c5197a8435} 
+\index{GameManager@{GameManager}!````~GameManager@{\texorpdfstring{$\sim$}{\string~}GameManager}}
+\index{````~GameManager@{\texorpdfstring{$\sim$}{\string~}GameManager}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameManager()}{\string~GameManager()}}
+{\footnotesize\ttfamily Game\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Game\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroys the \doxylink{classGameManager}{Game\+Manager}. 
+
+Virtual destructor.
+
+Currently does nothing, but it is defined explicitly so that virtual dispatch is respected (in case further clean‑up is added later or the class becomes a base class). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGameManager_ac7924b5fcd7468c39e59777dec596fc8}\label{classGameManager_ac7924b5fcd7468c39e59777dec596fc8} 
+\index{GameManager@{GameManager}!addAICharacter@{addAICharacter}}
+\index{addAICharacter@{addAICharacter}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{addAICharacter()}{addAICharacter()}}
+{\footnotesize\ttfamily void Game\+Manager\+::add\+AICharacter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCharacter}{Character}} \&}]{character }\end{DoxyParamCaption})}
+
+
+
+Adds a summoned character to the AI\textquotesingle{}s field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & \doxylink{classCharacter}{Character} to add.\\
+\hline
+\end{DoxyParams}
+Adds {\ttfamily character} to the AI side of the battlefield. \Hypertarget{classGameManager_a76f8cedae73cbcc7881a21e5a395fc8d}\label{classGameManager_a76f8cedae73cbcc7881a21e5a395fc8d} 
+\index{GameManager@{GameManager}!addPlayerCharacter@{addPlayerCharacter}}
+\index{addPlayerCharacter@{addPlayerCharacter}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{addPlayerCharacter()}{addPlayerCharacter()}}
+{\footnotesize\ttfamily void Game\+Manager\+::add\+Player\+Character (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCharacter}{Character}} \&}]{character }\end{DoxyParamCaption})}
+
+
+
+Adds a summoned character to the player\textquotesingle{}s field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & \doxylink{classCharacter}{Character} to add.\\
+\hline
+\end{DoxyParams}
+Adds {\ttfamily character} to the player\textquotesingle{}s side of the battlefield. \Hypertarget{classGameManager_a8aaf4a26c0b0814330bcdbcf6d681a56}\label{classGameManager_a8aaf4a26c0b0814330bcdbcf6d681a56} 
+\index{GameManager@{GameManager}!aiMakeMove@{aiMakeMove}}
+\index{aiMakeMove@{aiMakeMove}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{aiMakeMove()}{aiMakeMove()}}
+{\footnotesize\ttfamily void Game\+Manager\+::ai\+Make\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the AI\textquotesingle{}s decision-\/making logic for its turn. 
+
+Decide and execute the AI move for the current turn.
+
+The algorithm follows a simple priority scheme\+:
+\begin{DoxyEnumerate}
+\item Early game (first three AI turns) – summon any available character.
+\item If no characters on the AI field – summon a character.
+\item If the player controls a strong unit – attempt a direct attack card.
+\item If any AI unit is hurt – apply a support/heal card.
+\item Otherwise play a random card. 
+\end{DoxyEnumerate}\Hypertarget{classGameManager_a18b4e1b2d28de522b29efc4028ef5714}\label{classGameManager_a18b4e1b2d28de522b29efc4028ef5714} 
+\index{GameManager@{GameManager}!checkAIAnyDamagedAlly@{checkAIAnyDamagedAlly}}
+\index{checkAIAnyDamagedAlly@{checkAIAnyDamagedAlly}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{checkAIAnyDamagedAlly()}{checkAIAnyDamagedAlly()}}
+{\footnotesize\ttfamily bool Game\+Manager\+::check\+AIAny\+Damaged\+Ally (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if any AI-\/controlled character is damaged. 
+
+Check whether {\itshape any} AI character is below its initial HP (simplistic heuristic).
+
+\begin{DoxyReturn}{Returns}
+True if at least one unit has lost HP. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a7b4ae9d6a8a1a2943adcf79468af2860}\label{classGameManager_a7b4ae9d6a8a1a2943adcf79468af2860} 
+\index{GameManager@{GameManager}!checkGameOver@{checkGameOver}}
+\index{checkGameOver@{checkGameOver}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{checkGameOver()}{checkGameOver()}}
+{\footnotesize\ttfamily void Game\+Manager\+::check\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks win/loss/draw conditions and updates internal state. 
+
+Flag the match as finished when {\itshape all} hands and decks are empty. \Hypertarget{classGameManager_a32111a6b944a350ecc3251e305e6e85f}\label{classGameManager_a32111a6b944a350ecc3251e305e6e85f} 
+\index{GameManager@{GameManager}!dealCards@{dealCards}}
+\index{dealCards@{dealCards}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{dealCards()}{dealCards()}}
+{\footnotesize\ttfamily void Game\+Manager\+::deal\+Cards (\begin{DoxyParamCaption}\item[{int}]{count,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&}]{hand,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&}]{deck }\end{DoxyParamCaption})}
+
+
+
+Deals up to {\ttfamily count} cards from {\ttfamily deck} into {\ttfamily hand}, respecting hand composition rules. 
+
+Transfer up to {\ttfamily count} cards from {\ttfamily deck} → {\ttfamily hand} while respecting composition rules.
+
+Cards that violate \doxylink{GameManager_8cpp_a162d55b8c8d8182c948dcfe14383aff7}{can\+Add\+Card\+To\+Hand} are temporarily postponed; if we cannot reach the desired amount after traversing the deck once we back‑fill with those postponed cards so that the sizes stay consistent (even if illegal duplicates may appear).
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Desired number of cards to add. \\
+\hline
+{\em hand} & Destination hand. \\
+\hline
+{\em deck} & Source deck; cards are removed (popped) from the back. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameManager_ad1956e4beebb592d276a55b43ed65157}\label{classGameManager_ad1956e4beebb592d276a55b43ed65157} 
+\index{GameManager@{GameManager}!determineWinner@{determineWinner}}
+\index{determineWinner@{determineWinner}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{determineWinner()}{determineWinner()}}
+{\footnotesize\ttfamily std\+::string Game\+Manager\+::determine\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Determines the winner and returns a result string. 
+
+Compute who won (string explanation) based on the current state.
+
+The logic mirrors the project requirements\+:
+\begin{DoxyItemize}
+\item No characters on one side → that side loses immediately.
+\item Otherwise, if both players are out of resources compare board sizes, then total HP.
+\item Remaining unresolved cases are considered a draw. \begin{DoxyReturn}{Returns}
+Human‑readable English message (may contain Russian clarification). 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{classGameManager_a07631ea35ad39b55a809c6e7bfa4db2c}\label{classGameManager_a07631ea35ad39b55a809c6e7bfa4db2c} 
+\index{GameManager@{GameManager}!drawCardForAI@{drawCardForAI}}
+\index{drawCardForAI@{drawCardForAI}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{drawCardForAI()}{drawCardForAI()}}
+{\footnotesize\ttfamily void Game\+Manager\+::draw\+Card\+For\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws one card for the AI, if possible. 
+
+Draw a single card for the {\itshape AI} (if any remain in the deck). \Hypertarget{classGameManager_a9f0397746c1918d5fe2c961716d3c55e}\label{classGameManager_a9f0397746c1918d5fe2c961716d3c55e} 
+\index{GameManager@{GameManager}!drawCardForPlayer@{drawCardForPlayer}}
+\index{drawCardForPlayer@{drawCardForPlayer}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{drawCardForPlayer()}{drawCardForPlayer()}}
+{\footnotesize\ttfamily void Game\+Manager\+::draw\+Card\+For\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws one card for the player, if possible. 
+
+Draw a single card for the {\itshape player} (if any remain in the deck). \Hypertarget{classGameManager_a10df3da371d817f2b4ad317b1dc583f8}\label{classGameManager_a10df3da371d817f2b4ad317b1dc583f8} 
+\index{GameManager@{GameManager}!ensureMinimumAbilityCards@{ensureMinimumAbilityCards}}
+\index{ensureMinimumAbilityCards@{ensureMinimumAbilityCards}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{ensureMinimumAbilityCards()}{ensureMinimumAbilityCards()}}
+{\footnotesize\ttfamily void Game\+Manager\+::ensure\+Minimum\+Ability\+Cards (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&}]{hand,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&}]{deck }\end{DoxyParamCaption})}
+
+
+
+Ensures that a hand contains at least two ability cards. 
+
+Ensures that {\ttfamily hand} owns {\bfseries{at least}} two ability cards.
+
+If the requirement is not met, the function scans {\ttfamily deck} for the first ability cards it can find, moves them into the hand and stops once the quota is reached or the deck becomes empty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hand} & Mutable reference to the target hand. \\
+\hline
+{\em deck} & Mutable reference to the deck which {\itshape may lose} cards during the process. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGameManager_a573fc7dcdf152fd8f21ef13dba2afade}\label{classGameManager_a573fc7dcdf152fd8f21ef13dba2afade} 
+\index{GameManager@{GameManager}!findAttackCardInAIHand@{findAttackCardInAIHand}}
+\index{findAttackCardInAIHand@{findAttackCardInAIHand}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{findAttackCardInAIHand()}{findAttackCardInAIHand()}}
+{\footnotesize\ttfamily int Game\+Manager\+::find\+Attack\+Card\+In\+AIHand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Searches for an attack card in the AI\textquotesingle{}s hand. 
+
+\begin{DoxyReturn}{Returns}
+Index or -\/1 if none found.
+
+Index of the first attack card in the AI hand, or −1 if none. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a318d0a15d073d1c5bf06516587976bca}\label{classGameManager_a318d0a15d073d1c5bf06516587976bca} 
+\index{GameManager@{GameManager}!findCharacterCardAIHand@{findCharacterCardAIHand}}
+\index{findCharacterCardAIHand@{findCharacterCardAIHand}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{findCharacterCardAIHand()}{findCharacterCardAIHand()}}
+{\footnotesize\ttfamily int Game\+Manager\+::find\+Character\+Card\+AIHand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Searches for a character card in the AI\textquotesingle{}s hand. 
+
+\begin{DoxyReturn}{Returns}
+Index or -\/1 if none found.
+
+Index of the first character card in the AI hand, or −1 if none. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_ab6b9924270bdd1a864d147cf817b3949}\label{classGameManager_ab6b9924270bdd1a864d147cf817b3949} 
+\index{GameManager@{GameManager}!findStrongEnemy@{findStrongEnemy}}
+\index{findStrongEnemy@{findStrongEnemy}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{findStrongEnemy()}{findStrongEnemy()}}
+{\footnotesize\ttfamily int Game\+Manager\+::find\+Strong\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Locates a strong enemy unit (ATK ≥ 4). 
+
+Locate a strong enemy (ATK ≥ 4) to prioritise it as a target.
+
+\begin{DoxyReturn}{Returns}
+Index or -\/1 if none found.
+
+Index in the player field or −1 if no such enemy exists. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a1f33dd448c5f505e9ed6d39c1827a944}\label{classGameManager_a1f33dd448c5f505e9ed6d39c1827a944} 
+\index{GameManager@{GameManager}!findSupportCardAIHand@{findSupportCardAIHand}}
+\index{findSupportCardAIHand@{findSupportCardAIHand}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{findSupportCardAIHand()}{findSupportCardAIHand()}}
+{\footnotesize\ttfamily int Game\+Manager\+::find\+Support\+Card\+AIHand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Searches for a support card in the AI\textquotesingle{}s hand. 
+
+\begin{DoxyReturn}{Returns}
+Index or -\/1 if none found.
+
+Index of the first support card in the AI hand, or −1 if none. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a7e0400f24f16e087efa1ae69b79eff2a}\label{classGameManager_a7e0400f24f16e087efa1ae69b79eff2a} 
+\index{GameManager@{GameManager}!getAIDeck@{getAIDeck}}
+\index{getAIDeck@{getAIDeck}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{getAIDeck()}{getAIDeck()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& Game\+Manager\+::get\+AIDeck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the AI\textquotesingle{}s deck. 
+
+Returns a mutable reference to the AI\textquotesingle{}s deck. \Hypertarget{classGameManager_acf0218a2e830a3afbb3e991bf9398b53}\label{classGameManager_acf0218a2e830a3afbb3e991bf9398b53} 
+\index{GameManager@{GameManager}!getAIField@{getAIField}}
+\index{getAIField@{getAIField}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{getAIField()}{getAIField()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCharacter}{Character}} $>$ \& Game\+Manager\+::get\+AIField (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the AI\textquotesingle{}s characters on the battlefield. 
+
+\begin{DoxyReturn}{Returns}
+Mutable reference to all AI characters on the field. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a1f2df7fbf6aebe2e215497ff5dbddf12}\label{classGameManager_a1f2df7fbf6aebe2e215497ff5dbddf12} 
+\index{GameManager@{GameManager}!getAIHand@{getAIHand}}
+\index{getAIHand@{getAIHand}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{getAIHand()}{getAIHand()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& Game\+Manager\+::get\+AIHand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the AI\textquotesingle{}s hand. 
+
+\begin{DoxyReturn}{Returns}
+Mutable reference to the AI hand. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_aa8ad3f58d9c007af8ac5ce8a1c924335}\label{classGameManager_aa8ad3f58d9c007af8ac5ce8a1c924335} 
+\index{GameManager@{GameManager}!getPlayerDeck@{getPlayerDeck}}
+\index{getPlayerDeck@{getPlayerDeck}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{getPlayerDeck()}{getPlayerDeck()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& Game\+Manager\+::get\+Player\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the player\textquotesingle{}s deck. 
+
+Returns a mutable reference to the player\textquotesingle{}s deck. \Hypertarget{classGameManager_aadf4d4a94ce8bdbd1bc0e4578716a77c}\label{classGameManager_aadf4d4a94ce8bdbd1bc0e4578716a77c} 
+\index{GameManager@{GameManager}!getPlayerField@{getPlayerField}}
+\index{getPlayerField@{getPlayerField}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{getPlayerField()}{getPlayerField()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCharacter}{Character}} $>$ \& Game\+Manager\+::get\+Player\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the player\textquotesingle{}s characters on the battlefield. 
+
+\begin{DoxyReturn}{Returns}
+Mutable reference to all {\itshape player} characters on the field. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a08946c3f678c6de4e39b6d81cda76b24}\label{classGameManager_a08946c3f678c6de4e39b6d81cda76b24} 
+\index{GameManager@{GameManager}!getPlayerHand@{getPlayerHand}}
+\index{getPlayerHand@{getPlayerHand}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{getPlayerHand()}{getPlayerHand()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \& Game\+Manager\+::get\+Player\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a reference to the player\textquotesingle{}s hand. 
+
+\begin{DoxyReturn}{Returns}
+Mutable reference to the player\textquotesingle{}s hand. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a7125281b77819d82bb83bf24ad696c2f}\label{classGameManager_a7125281b77819d82bb83bf24ad696c2f} 
+\index{GameManager@{GameManager}!initializeAIDeck@{initializeAIDeck}}
+\index{initializeAIDeck@{initializeAIDeck}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{initializeAIDeck()}{initializeAIDeck()}}
+{\footnotesize\ttfamily void Game\+Manager\+::initialize\+AIDeck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the AI\textquotesingle{}s deck. 
+
+Populate the AI deck with 10 pseudo‑random cards.
+
+The distribution is uniform across ten distinct indices (0‑9) each mapped to a particular card type. The PRNG is seeded once per application lifetime so that multiple calls (such as repeated games) continue with a new random sequence. \Hypertarget{classGameManager_a8245fff2b62597f06f1418bea8032c7e}\label{classGameManager_a8245fff2b62597f06f1418bea8032c7e} 
+\index{GameManager@{GameManager}!initializePlayerDeck@{initializePlayerDeck}}
+\index{initializePlayerDeck@{initializePlayerDeck}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{initializePlayerDeck()}{initializePlayerDeck()}}
+{\footnotesize\ttfamily void Game\+Manager\+::initialize\+Player\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the player\textquotesingle{}s deck. 
+
+Populate the {\itshape player} deck with 10 pseudo‑random cards.
+
+The logic is identical to \doxylink{classGameManager_a7125281b77819d82bb83bf24ad696c2f}{initialize\+AIDeck}; duplicated intentionally so both sides have symmetrical random builds without sharing storage. \Hypertarget{classGameManager_a8d4c015a3785398b218b158c77016854}\label{classGameManager_a8d4c015a3785398b218b158c77016854} 
+\index{GameManager@{GameManager}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily bool Game\+Manager\+::is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the game has ended. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the match has ended (see \doxylink{classGameManager_a7b4ae9d6a8a1a2943adcf79468af2860}{check\+Game\+Over}). 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_ab02ec04ad3a1582dd870a50ec73c032b}\label{classGameManager_ab02ec04ad3a1582dd870a50ec73c032b} 
+\index{GameManager@{GameManager}!isPlayerTurn@{isPlayerTurn}}
+\index{isPlayerTurn@{isPlayerTurn}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{isPlayerTurn()}{isPlayerTurn()}}
+{\footnotesize\ttfamily bool Game\+Manager\+::is\+Player\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if it is currently the player\textquotesingle{}s turn. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} when it is currently the player\textquotesingle{}s turn. 
+\end{DoxyReturn}
+\Hypertarget{classGameManager_a3a02f2e3835820c50581946047cedbfe}\label{classGameManager_a3a02f2e3835820c50581946047cedbfe} 
+\index{GameManager@{GameManager}!runTurn@{runTurn}}
+\index{runTurn@{runTurn}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{runTurn()}{runTurn()}}
+{\footnotesize\ttfamily void Game\+Manager\+::run\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executes a full turn\+: player move, AI move, optional combat. 
+
+Execute one full round\+: player interaction → AI logic → draws → combat → end‑game check.
+
+The body is quite verbose because of console I/O, yet the high‑level flow is\+:
+\begin{DoxyEnumerate}
+\item Player selects and plays a card (or skips on invalid input).
+\item AI chooses a move via \doxylink{classGameManager_a8aaf4a26c0b0814330bcdbcf6d681a56}{ai\+Make\+Move}.
+\item Both sides draw one card.
+\item Optional single combat where the player initiates an attack.
+\item End‑game detection and winner announcement when appropriate. 
+\end{DoxyEnumerate}\Hypertarget{classGameManager_ae272eb0bf4e4987797fcff97723819cc}\label{classGameManager_ae272eb0bf4e4987797fcff97723819cc} 
+\index{GameManager@{GameManager}!startGame@{startGame}}
+\index{startGame@{startGame}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void Game\+Manager\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts a new game\+: initializes decks and hands. 
+
+Bootstraps a new match (decks → hands → first draw) and prints basic information.
+
+This method
+\begin{DoxyEnumerate}
+\item Builds a fresh deck for both the player and the AI.
+\item Deals the full deck into the player/\+AI hands while respecting deck rules via \doxylink{classGameManager_a32111a6b944a350ecc3251e305e6e85f}{deal\+Cards} and \doxylink{classGameManager_a10df3da371d817f2b4ad317b1dc583f8}{ensure\+Minimum\+Ability\+Cards}.
+\item Displays initial hand sizes so that the user sees immediate feedback. 
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{GameManager_8hpp}{Game\+Manager.\+hpp}}\item 
+src/\mbox{\hyperlink{GameManager_8cpp}{Game\+Manager.\+cpp}}\end{DoxyCompactItemize}

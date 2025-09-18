@@ -1,0 +1,98 @@
+\doxysection{Test\+Card Class Reference}
+\hypertarget{classTestCard}{}\label{classTestCard}\index{TestCard@{TestCard}}
+
+
+Test implementation of pure virtual \doxylink{classCard}{Card}.  
+
+
+
+
+Inheritance diagram for Test\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTestCard_ad130a951b794ddb8263327b9d2e23aa7}\label{classTestCard_ad130a951b794ddb8263327b9d2e23aa7} 
+{\bfseries Test\+Card} (const std\+::string \&n, int c)
+\item 
+std\+::string \mbox{\hyperlink{classTestCard_abe540ec5c71d7fd23191710fa92ce9f4}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTestCard_affd85860cdb7a7622972bfae302e1ecd}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the cost to play this card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTestCard_a26dee1c84d45dbca5c7bbe70f675e1b7}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&) override
+\begin{DoxyCompactList}\small\item\em Activates the card\textquotesingle{}s effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test implementation of pure virtual \doxylink{classCard}{Card}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTestCard_affd85860cdb7a7622972bfae302e1ecd}\label{classTestCard_affd85860cdb7a7622972bfae302e1ecd} 
+\index{TestCard@{TestCard}!getCost@{getCost}}
+\index{getCost@{getCost}!TestCard@{TestCard}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Test\+Card\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the cost to play this card. 
+
+\begin{DoxyReturn}{Returns}
+An integer cost value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+\Hypertarget{classTestCard_abe540ec5c71d7fd23191710fa92ce9f4}\label{classTestCard_abe540ec5c71d7fd23191710fa92ce9f4} 
+\index{TestCard@{TestCard}!getName@{getName}}
+\index{getName@{getName}!TestCard@{TestCard}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Test\+Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the card. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the card\textquotesingle{}s name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+\Hypertarget{classTestCard_a26dee1c84d45dbca5c7bbe70f675e1b7}\label{classTestCard_a26dee1c84d45dbca5c7bbe70f675e1b7} 
+\index{TestCard@{TestCard}!use@{use}}
+\index{use@{use}!TestCard@{TestCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Test\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Activates the card\textquotesingle{}s effect. 
+
+This pure virtual function must be implemented by derived classes to define what happens when the card is played.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the current game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{Card}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{test__card__logic_8cpp}{test\+\_\+card\+\_\+logic.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\doxysection{Ability\+Card Class Reference}
+\hypertarget{classAbilityCard}{}\label{classAbilityCard}\index{AbilityCard@{AbilityCard}}
+
+
+Represents a card that applies an effect (e.\+g., damage, healing, buff).  
+
+
+
+
+{\ttfamily \#include $<$Ability\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Ability\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Ability\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAbilityCard_a73ffa6c170b699011ca26dfae2c9e4fb}{Ability\+Card}} (const std\+::string \&name, int cost, int effect\+Power)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAbilityCard}{Ability\+Card} with given parameters. \end{DoxyCompactList}\item 
+\Hypertarget{classAbilityCard_a9087b6fdbd184025aedbbedff255f7fd}\label{classAbilityCard_a9087b6fdbd184025aedbbedff255f7fd} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Ability\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAbilityCard_a5e7ccdf36edc6ac1e082f79370522df6}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAbilityCard_af4b2d0a189b892821c777d2cc89ae911}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the resource cost of the card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAbilityCard_af664d68970552e7516d9dc8b23099455}{use}} ()
+\begin{DoxyCompactList}\small\item\em Applies the card\textquotesingle{}s effect (to be overridden by derived classes). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm)=0
+\begin{DoxyCompactList}\small\item\em Activates the card\textquotesingle{}s effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a card that applies an effect (e.\+g., damage, healing, buff). 
+
+This is an abstract representation of any non-\/character card that directly influences the battlefield through a one-\/time effect.
+
+Inherits from \doxylink{classCard}{Card}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAbilityCard_a73ffa6c170b699011ca26dfae2c9e4fb}\label{classAbilityCard_a73ffa6c170b699011ca26dfae2c9e4fb} 
+\index{AbilityCard@{AbilityCard}!AbilityCard@{AbilityCard}}
+\index{AbilityCard@{AbilityCard}!AbilityCard@{AbilityCard}}
+\doxysubsubsection{\texorpdfstring{AbilityCard()}{AbilityCard()}}
+{\footnotesize\ttfamily Ability\+Card\+::\+Ability\+Card (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{effect\+Power }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classAbilityCard}{Ability\+Card} with given parameters. 
+
+Constructs an \doxylink{classAbilityCard}{Ability\+Card} with a given name, cost, and effect power.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the ability card. \\
+\hline
+{\em cost} & The resource cost to use this card. \\
+\hline
+{\em effect\+Power} & The effect magnitude (e.\+g., damage or healing amount).\\
+\hline
+{\em name} & The name of the ability. \\
+\hline
+{\em cost} & The mana or energy cost to use the ability. \\
+\hline
+{\em effect\+Power} & The numerical effect of the ability (e.\+g., damage, buff amount). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAbilityCard_af4b2d0a189b892821c777d2cc89ae911}\label{classAbilityCard_af4b2d0a189b892821c777d2cc89ae911} 
+\index{AbilityCard@{AbilityCard}!getCost@{getCost}}
+\index{getCost@{getCost}!AbilityCard@{AbilityCard}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Ability\+Card\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the resource cost of the card. 
+
+Gets the cost required to use the ability.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+The cost as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+\Hypertarget{classAbilityCard_a5e7ccdf36edc6ac1e082f79370522df6}\label{classAbilityCard_a5e7ccdf36edc6ac1e082f79370522df6} 
+\index{AbilityCard@{AbilityCard}!getName@{getName}}
+\index{getName@{getName}!AbilityCard@{AbilityCard}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Ability\+Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name of the card. 
+
+Gets the name of the ability.
+
+\begin{DoxyReturn}{Returns}
+A string representing the card name.
+
+The name as a std\+::string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+\Hypertarget{classAbilityCard_af664d68970552e7516d9dc8b23099455}\label{classAbilityCard_af664d68970552e7516d9dc8b23099455} 
+\index{AbilityCard@{AbilityCard}!use@{use}}
+\index{use@{use}!AbilityCard@{AbilityCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Ability\+Card\+::use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Applies the card\textquotesingle{}s effect (to be overridden by derived classes). 
+
+Applies the effect of the ability.
+
+This base version should normally not be called directly.
+
+This function simulates using the ability (e.\+g., damage, buffs). Actual logic should be implemented later. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{AbilityCard_8hpp}{Ability\+Card.\+hpp}}\item 
+src/Ability\+Card.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,228 @@
+\doxysection{Knight Class Reference}
+\hypertarget{classKnight}{}\label{classKnight}\index{Knight@{Knight}}
+
+
+A \doxylink{classWarrior}{Warrior} card that represents a durable frontline unit.  
+
+
+
+
+{\ttfamily \#include $<$Knight.\+hpp$>$}
+
+
+
+Inheritance diagram for Knight\+:
+% FIG 0
+
+
+Collaboration diagram for Knight\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKnight_ae27e92b60ae113e8b29d919c48300cd5}{Knight}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classKnight}{Knight} card. \end{DoxyCompactList}\item 
+\Hypertarget{classKnight_aad424cdf51b153b3ecf71a9df84f1280}\label{classKnight_aad424cdf51b153b3ecf71a9df84f1280} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Knight} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classKnight_a86bc5c7236da42c8e2409b4d83b24cbb}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKnight_acc1a23e8a79757551b66e3a72f47a25f}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the cost to play this card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKnight_a39efa6ccebfb3ee6510f6d38a63ae7e5}{get\+Attack}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the attack value of the \doxylink{classKnight}{Knight}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKnight_a183e0b4a72f1c661b05b7b3b20b9949e}{get\+Health}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the health value of the \doxylink{classKnight}{Knight}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKnight_ae9ddff6e38c6de81ab2de0bd2b8e0c92}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Applies the effect of the \doxylink{classKnight}{Knight} card (summoning a character to the battlefield). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classWarrior}{Warrior}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWarrior_a15b60510dfaae1f4dc0fdb578f2549a5}{Warrior}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWarrior}{Warrior} character card. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Warrior} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classCharacterCard}{Character\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{classWarrior}{Warrior} card that represents a durable frontline unit. 
+
+Inherits from \doxylink{classWarrior}{Warrior}. The \doxylink{classKnight}{Knight} is typically a basic melee character with balanced stats. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKnight_ae27e92b60ae113e8b29d919c48300cd5}\label{classKnight_ae27e92b60ae113e8b29d919c48300cd5} 
+\index{Knight@{Knight}!Knight@{Knight}}
+\index{Knight@{Knight}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{Knight()}{Knight()}}
+{\footnotesize\ttfamily Knight\+::\+Knight (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classKnight}{Knight} card. 
+
+Constructs a \doxylink{classKnight}{Knight} card with specific attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The resource cost to play the card. \\
+\hline
+{\em attack} & The attack value of the \doxylink{classKnight}{Knight}. \\
+\hline
+{\em health} & The health value of the \doxylink{classKnight}{Knight}.\\
+\hline
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The cost to play the card. \\
+\hline
+{\em attack} & The attack value of the character. \\
+\hline
+{\em health} & The health value of the character. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKnight_a39efa6ccebfb3ee6510f6d38a63ae7e5}\label{classKnight_a39efa6ccebfb3ee6510f6d38a63ae7e5} 
+\index{Knight@{Knight}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Knight\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the attack value of the \doxylink{classKnight}{Knight}. 
+
+Retrieves the attack value of the card.
+
+\begin{DoxyReturn}{Returns}
+Integer attack value.
+
+The card\textquotesingle{}s attack power. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{Character\+Card}}.
+
+\Hypertarget{classKnight_acc1a23e8a79757551b66e3a72f47a25f}\label{classKnight_acc1a23e8a79757551b66e3a72f47a25f} 
+\index{Knight@{Knight}!getCost@{getCost}}
+\index{getCost@{getCost}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Knight\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the cost to play this card. 
+
+Retrieves the cost of the card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+The card\textquotesingle{}s cost. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{Character\+Card}}.
+
+\Hypertarget{classKnight_a183e0b4a72f1c661b05b7b3b20b9949e}\label{classKnight_a183e0b4a72f1c661b05b7b3b20b9949e} 
+\index{Knight@{Knight}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Knight\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the health value of the \doxylink{classKnight}{Knight}. 
+
+Retrieves the health value of the card.
+
+\begin{DoxyReturn}{Returns}
+Integer health value.
+
+The card\textquotesingle{}s health points. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{Character\+Card}}.
+
+\Hypertarget{classKnight_a86bc5c7236da42c8e2409b4d83b24cbb}\label{classKnight_a86bc5c7236da42c8e2409b4d83b24cbb} 
+\index{Knight@{Knight}!getName@{getName}}
+\index{getName@{getName}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Knight\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the name of the card. 
+
+Retrieves the name of the card.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classCard}{Card} name as a string.
+
+The card\textquotesingle{}s name. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{Character\+Card}}.
+
+\Hypertarget{classKnight_ae9ddff6e38c6de81ab2de0bd2b8e0c92}\label{classKnight_ae9ddff6e38c6de81ab2de0bd2b8e0c92} 
+\index{Knight@{Knight}!use@{use}}
+\index{use@{use}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Knight\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the effect of the \doxylink{classKnight}{Knight} card (summoning a character to the battlefield). 
+
+Applies the effect of the \doxylink{classKnight}{Knight} card by summoning a character to the battlefield.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the game state.\\
+\hline
+\end{DoxyParams}
+A new \doxylink{classCharacter}{Character} instance is created and added to the appropriate field depending on whose turn it is.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the current \doxylink{classGameManager}{Game\+Manager} instance. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{Character\+Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Knight_8hpp}{Knight.\+hpp}}\item 
+src/\mbox{\hyperlink{Knight_8cpp}{Knight.\+cpp}}\end{DoxyCompactItemize}

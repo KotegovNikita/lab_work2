@@ -1,0 +1,32 @@
+\doxysection{Rogue.\+hpp}
+\hypertarget{Rogue_8hpp_source}{}\label{Rogue_8hpp_source}\index{include/Rogue.hpp@{include/Rogue.hpp}}
+\mbox{\hyperlink{Rogue_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROGUE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROGUE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CharacterCard_8hpp}{CharacterCard.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GameManager_8hpp}{GameManager.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRogue}{Rogue}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCharacterCard}{CharacterCard}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classRogue}{Rogue}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ cost,\ \textcolor{keywordtype}{int}\ attack,\ \textcolor{keywordtype}{int}\ health);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classRogue_a4a98a96fb0afba5ad37982d35d3b8d69}{\string~Rogue}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ \mbox{\hyperlink{classRogue_a134e394987ed34b5493536e350f48dee}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRogue_a12483649ebb449e4f46938a71db573de}{getCost}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86}{getAttack}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRogue_a2c3c98456309805a07065d3e9ef283d5}{getHealth}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}{use}}(\mbox{\hyperlink{classGameManager}{GameManager}}\&\ gm)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROGUE\_HPP}}
+\DoxyCodeLine{00070\ }
+
+\end{DoxyCode}

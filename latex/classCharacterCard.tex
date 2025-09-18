@@ -1,0 +1,223 @@
+\doxysection{Character\+Card Class Reference}
+\hypertarget{classCharacterCard}{}\label{classCharacterCard}\index{CharacterCard@{CharacterCard}}
+
+
+Abstract base class for all summonable character cards (e.\+g., \doxylink{classKnight}{Knight}, \doxylink{classMage}{Mage}, \doxylink{classRogue}{Rogue}).  
+
+
+
+
+{\ttfamily \#include $<$Character\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Character\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Character\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}{Character\+Card}} (const std\+::string \&name, int cost, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character card with the given properties. \end{DoxyCompactList}\item 
+\Hypertarget{classCharacterCard_ad2f9aa4488a2ea6a2863733793517223}\label{classCharacterCard_ad2f9aa4488a2ea6a2863733793517223} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character\+Card} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}{get\+Attack}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the attack value of the character. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}{get\+Health}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the health value of the character. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm)=0
+\begin{DoxyCompactList}\small\item\em Defines the effect of using the card (typically summoning a character to the field). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play this card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCharacterCard_a6c79fc086187bc62aacbc4fe010397a9}\label{classCharacterCard_a6c79fc086187bc62aacbc4fe010397a9} 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+\Hypertarget{classCharacterCard_a8d2f197e8a5ff8e89020c772023c59f8}\label{classCharacterCard_a8d2f197e8a5ff8e89020c772023c59f8} 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+\Hypertarget{classCharacterCard_aaf1b9921026c13a3adace748526563f7}\label{classCharacterCard_aaf1b9921026c13a3adace748526563f7} 
+int {\bfseries m\+\_\+attack}
+\begin{DoxyCompactList}\small\item\em Attack power of the character. \end{DoxyCompactList}\item 
+\Hypertarget{classCharacterCard_aa9e1cb9cc9f634757b74cf2752b1a978}\label{classCharacterCard_aa9e1cb9cc9f634757b74cf2752b1a978} 
+int {\bfseries m\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Health points of the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all summonable character cards (e.\+g., \doxylink{classKnight}{Knight}, \doxylink{classMage}{Mage}, \doxylink{classRogue}{Rogue}). 
+
+This class extends the \doxylink{classCard}{Card} interface by adding attributes such as attack and health, and mandates implementation of methods that define a character’s combat stats and summoning logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15}\label{classCharacterCard_ae0497d8a537fb5643eeb4ca0acb4db15} 
+\index{CharacterCard@{CharacterCard}!CharacterCard@{CharacterCard}}
+\index{CharacterCard@{CharacterCard}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{CharacterCard()}{CharacterCard()}}
+{\footnotesize\ttfamily Character\+Card\+::\+Character\+Card (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a character card with the given properties. 
+
+Constructs a \doxylink{classCharacterCard}{Character\+Card} with the given stats.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the character. \\
+\hline
+{\em cost} & Resource cost to play this card. \\
+\hline
+{\em attack} & Attack value of the summoned character. \\
+\hline
+{\em health} & Health value of the summoned character.\\
+\hline
+{\em name} & The name of the character card. \\
+\hline
+{\em cost} & The cost to play the card. \\
+\hline
+{\em attack} & The attack value of the character. \\
+\hline
+{\em health} & The health value of the character. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68}\label{classCharacterCard_a66d7850970274aa163fe3c9b9a97ef68} 
+\index{CharacterCard@{CharacterCard}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily virtual int Character\+Card\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the attack value of the character. 
+
+\begin{DoxyReturn}{Returns}
+Integer attack value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAssassin_afcfff7733ae5fa679f9d46e05f82039e}{Assassin}}, \mbox{\hyperlink{classBerserk_a97d3e5a2737a3b79769da9e9c14e632a}{Berserk}}, \mbox{\hyperlink{classElementalist_a4e62703e36cbecb6f6868b431333fd1c}{Elementalist}}, \mbox{\hyperlink{classKnight_a39efa6ccebfb3ee6510f6d38a63ae7e5}{Knight}}, \mbox{\hyperlink{classRogue_a26ebac6f9dfe2ccea6c059da94a2bb86}{Rogue}}, \mbox{\hyperlink{classThief_ab598143aa68fb9ba21e3a0b20a28e721}{Thief}}, \mbox{\hyperlink{classWarlock_ab177c8c4c6ba3a39e40f9df9e5bdd9a9}{Warlock}}, and \mbox{\hyperlink{classTestCharacterCard_a85d6c9453affaba16afe0ecbb8503cdc}{Test\+Character\+Card}}.
+
+\Hypertarget{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a}\label{classCharacterCard_a6fbb70ed73d5ef02602582a6e0042e8a} 
+\index{CharacterCard@{CharacterCard}!getCost@{getCost}}
+\index{getCost@{getCost}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Character\+Card\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the cost to play this card. 
+
+Retrieves the cost to play the character card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost.
+
+Cost as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classElementalist_a886b8b930bd9c33cecd1a5b3ebfb56a4}{Elementalist}}, \mbox{\hyperlink{classKnight_acc1a23e8a79757551b66e3a72f47a25f}{Knight}}, \mbox{\hyperlink{classRogue_a12483649ebb449e4f46938a71db573de}{Rogue}}, \mbox{\hyperlink{classThief_a127e6625aa0d55a6b2242ecc98876c2a}{Thief}}, and \mbox{\hyperlink{classWarlock_a93fead47f6372182157e41ae7e2a8b57}{Warlock}}.
+
+\Hypertarget{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106}\label{classCharacterCard_a1678a3134e8d0db1135e0919b66fe106} 
+\index{CharacterCard@{CharacterCard}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily virtual int Character\+Card\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the health value of the character. 
+
+\begin{DoxyReturn}{Returns}
+Integer health value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classAssassin_abb74b44f058f0da1a63483ce22ed478a}{Assassin}}, \mbox{\hyperlink{classBerserk_a674c63ffeb7b8cf597445bce6f266aaa}{Berserk}}, \mbox{\hyperlink{classElementalist_ad085ce9d8c24a83774be7b1a7359e8b5}{Elementalist}}, \mbox{\hyperlink{classKnight_a183e0b4a72f1c661b05b7b3b20b9949e}{Knight}}, \mbox{\hyperlink{classRogue_a2c3c98456309805a07065d3e9ef283d5}{Rogue}}, \mbox{\hyperlink{classThief_a4cc1bb74d5318db451474480f0e6ed42}{Thief}}, \mbox{\hyperlink{classWarlock_af1697c011dbd4f620cc710da6da4f263}{Warlock}}, and \mbox{\hyperlink{classTestCharacterCard_a2b817138606ab9834bfb243624f596ee}{Test\+Character\+Card}}.
+
+\Hypertarget{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921}\label{classCharacterCard_a55ba8f77f9ea23e11798cd473671e921} 
+\index{CharacterCard@{CharacterCard}!getName@{getName}}
+\index{getName@{getName}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Character\+Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name of the card. 
+
+Retrieves the name of the character card.
+
+\begin{DoxyReturn}{Returns}
+String name.
+
+Name as a std\+::string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classElementalist_a7269cddac19d97d71221fd8ec1dbc8c0}{Elementalist}}, \mbox{\hyperlink{classKnight_a86bc5c7236da42c8e2409b4d83b24cbb}{Knight}}, \mbox{\hyperlink{classRogue_a134e394987ed34b5493536e350f48dee}{Rogue}}, \mbox{\hyperlink{classThief_ab08a0b762c8997f9542fe3fa55bbb49b}{Thief}}, and \mbox{\hyperlink{classWarlock_ab470dd89dd46b8a8dd2fbda67c8fc9d5}{Warlock}}.
+
+\Hypertarget{classCharacterCard_a3424f53d349a964d625f65e9997d4b11}\label{classCharacterCard_a3424f53d349a964d625f65e9997d4b11} 
+\index{CharacterCard@{CharacterCard}!use@{use}}
+\index{use@{use}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Character\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Defines the effect of using the card (typically summoning a character to the field). 
+
+Uses the character card to perform an action in the game.
+
+Must be implemented by derived classes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} controlling the game.\\
+\hline
+\end{DoxyParams}
+This method is a placeholder. In the final version, it should summon a character onto the battlefield via the \doxylink{classGameManager}{Game\+Manager}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{Card}}.
+
+
+
+Implemented in \mbox{\hyperlink{classTestCharacterCard_aecebd1277c70f2a619a2cce465564024}{Test\+Character\+Card}}, \mbox{\hyperlink{classAssassin_a4b512a7ab07a00c932bcecab48d49f0c}{Assassin}}, \mbox{\hyperlink{classBerserk_a08c0d8e233774744dd56ff6ce2cb51a0}{Berserk}}, \mbox{\hyperlink{classElementalist_a6792e7d612c678e2f1954334e5d70ba7}{Elementalist}}, \mbox{\hyperlink{classKnight_ae9ddff6e38c6de81ab2de0bd2b8e0c92}{Knight}}, \mbox{\hyperlink{classRogue_ae2ce16ac4dbb21bd48dc31650e3cb3a1}{Rogue}}, \mbox{\hyperlink{classThief_a37c92c1a41acfeac14321bdc5e849b3e}{Thief}}, and \mbox{\hyperlink{classWarlock_ac7520514cfa0ab320cef69ae997adea7}{Warlock}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{CharacterCard_8hpp}{Character\+Card.\+hpp}}\item 
+src/Character\+Card.\+cpp\end{DoxyCompactItemize}

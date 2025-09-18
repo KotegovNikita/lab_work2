@@ -1,0 +1,32 @@
+\doxysection{Support\+Card.\+hpp}
+\hypertarget{SupportCard_8hpp_source}{}\label{SupportCard_8hpp_source}\index{include/SupportCard.hpp@{include/SupportCard.hpp}}
+\mbox{\hyperlink{SupportCard_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUPPORT\_CARD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUPPORT\_CARD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Card_8hpp}{Card.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSupportCard}{SupportCard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCard}{Card}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{classSupportCard_af609da13d5293e95d45b659a29a98301}{m\_name}};\ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSupportCard_a3cee006f3372e49d8aa2a3c3c7bfea2b}{m\_cost}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSupportCard_ad4addf26e25e03540743ccdb3cedede6}{m\_power}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classSupportCard}{SupportCard}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ cost,\ \textcolor{keywordtype}{int}\ power);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSupportCard_af4275a4c66f535e5837b5ae1b7b052c0}{\string~SupportCard}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ \mbox{\hyperlink{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}{getCost}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}{use}}(\mbox{\hyperlink{classGameManager}{GameManager}}\&\ gm)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUPPORT\_CARD\_HPP}}
+\DoxyCodeLine{00061\ }
+
+\end{DoxyCode}

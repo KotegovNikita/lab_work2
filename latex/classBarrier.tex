@@ -1,0 +1,131 @@
+\doxysection{Barrier Class Reference}
+\hypertarget{classBarrier}{}\label{classBarrier}\index{Barrier@{Barrier}}
+
+
+A support-\/type card that grants a shield (defensive buff) to an allied character.  
+
+
+
+
+{\ttfamily \#include $<$Barrier.\+hpp$>$}
+
+
+
+Inheritance diagram for Barrier\+:
+% FIG 0
+
+
+Collaboration diagram for Barrier\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBarrier_a2b41b6442c02c49b35646e44e5d6ed9a}{Barrier}} (const std\+::string \&name, int cost, int shield\+Power)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classBarrier}{Barrier} card. \end{DoxyCompactList}\item 
+\Hypertarget{classBarrier_abb0622b520efd6434c9f5035650addfe}\label{classBarrier_abb0622b520efd6434c9f5035650addfe} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Barrier} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarrier_af952d092c4aef167ae1a2bf784a895d3}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Applies the shield effect to an allied character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSupportCard}{Support\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSupportCard_a562738edad1adf3689e463ac06b90b29}{Support\+Card}} (const std\+::string \&name, int cost, int power)
+\begin{DoxyCompactList}\small\item\em Constructs a support card. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Support\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the support card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play the card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Executes the card’s effect (to be overridden in derived classes). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSupportCard}{Support\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+power}
+\begin{DoxyCompactList}\small\item\em Effect strength (e.\+g., healing amount or shield value) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A support-\/type card that grants a shield (defensive buff) to an allied character. 
+
+Inherits from \doxylink{classSupportCard}{Support\+Card}. When played, this card typically adds protection to a unit, though the specific logic is implemented in the overridden \doxylink{classBarrier_af952d092c4aef167ae1a2bf784a895d3}{use()} method. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBarrier_a2b41b6442c02c49b35646e44e5d6ed9a}\label{classBarrier_a2b41b6442c02c49b35646e44e5d6ed9a} 
+\index{Barrier@{Barrier}!Barrier@{Barrier}}
+\index{Barrier@{Barrier}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{Barrier()}{Barrier()}}
+{\footnotesize\ttfamily Barrier\+::\+Barrier (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{shield\+Power }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classBarrier}{Barrier} card. 
+
+Constructs a \doxylink{classBarrier}{Barrier} support card with a name, cost, and shield power.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The cost to play the card. \\
+\hline
+{\em shield\+Power} & The strength of the shield applied.\\
+\hline
+{\em name} & The name of the \doxylink{classBarrier}{Barrier} card. \\
+\hline
+{\em cost} & The cost required to play the card. \\
+\hline
+{\em shield\+Power} & The amount of shielding power applied to allies. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBarrier_af952d092c4aef167ae1a2bf784a895d3}\label{classBarrier_af952d092c4aef167ae1a2bf784a895d3} 
+\index{Barrier@{Barrier}!use@{use}}
+\index{use@{use}!Barrier@{Barrier}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Barrier\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the shield effect to an allied character. 
+
+Applies the shield effect to allied characters.
+
+Specific implementation is defined in Barrier.\+cpp. It may involve selecting an ally and increasing their defense or reducing incoming damage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} managing the current game state.\\
+\hline
+\end{DoxyParams}
+If there are allies on the field, this method applies a shield effect to them. The current implementation only logs the action. Shield mechanics should be properly implemented in the game logic (e.\+g., via status effects or a shield attribute).
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} which handles the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{Card}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Barrier_8hpp}{Barrier.\+hpp}}\item 
+src/Barrier.\+cpp\end{DoxyCompactItemize}

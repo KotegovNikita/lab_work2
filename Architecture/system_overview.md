@@ -1,3 +1,5 @@
+/* Nikita Kotegov st128906@student.spbu.ru Group B81 Lab_work2 */
+
 Dungeon Card Clash is a turn-based card RPG with roguelike elements.
 The player controls a deck of cards, consisting of characters and abilities, and fights against the enemy (AI).
 The one who destroys all the enemy fighters wins.

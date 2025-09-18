@@ -1,0 +1,81 @@
+\doxysection{Character Logic Tests}
+\hypertarget{group__CharacterTests}{}\label{group__CharacterTests}\index{Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__CharacterTests_ga62bb2f6d47b556d3aa2c4f3fbd0ced41}{TEST}} (Character\+Test, Knight\+Blocks\+One\+And\+Counterattacks)
+\item 
+\mbox{\hyperlink{group__CharacterTests_ga07f275d3e1948456e1b6db4da93fbb3e}{TEST}} (Character\+Test, Berserk\+Bonus\+Damage)
+\item 
+\mbox{\hyperlink{group__CharacterTests_gab62939dfa55e6b567a08f75de8d42cc1}{TEST}} (Character\+Test, Warlock\+Sacrifice)
+\item 
+\mbox{\hyperlink{group__CharacterTests_ga6a4d36b707b5f6ae5fd5fa0b576b024a}{TEST}} (Character\+Test, Assassin\+Critical\+Hit)
+\item 
+\mbox{\hyperlink{group__CharacterTests_gac374e046114f7fedb8af27e0d38f082f}{TEST}} (Character\+Test, Thief\+Steals\+One\+Card)
+\item 
+\mbox{\hyperlink{group__CharacterTests_gacd436aa6c42b508930a6a9ef157dbea5}{TEST}} (Character\+Test, Elementalist\+Basic)
+\item 
+\mbox{\hyperlink{group__CharacterTests_ga64c3701639bb6246fb27c64adbfa2f1c}{TEST}} (Character\+Test, Is\+Dead\+Works)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tests for character combat behaviors, death check, and thief interactions. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__CharacterTests_ga6a4d36b707b5f6ae5fd5fa0b576b024a}\label{group__CharacterTests_ga6a4d36b707b5f6ae5fd5fa0b576b024a} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Assassin\+Critical\+Hit}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000004}{Test}}]\doxylink{classAssassin}{Assassin} lands critical hit (forced via srand(0)). \end{DoxyRefDesc}
+\Hypertarget{group__CharacterTests_ga07f275d3e1948456e1b6db4da93fbb3e}\label{group__CharacterTests_ga07f275d3e1948456e1b6db4da93fbb3e} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Berserk\+Bonus\+Damage}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000002}{Test}}]\doxylink{classBerserk}{Berserk} deals +2 damage if below 50\% HP. \end{DoxyRefDesc}
+\Hypertarget{group__CharacterTests_gacd436aa6c42b508930a6a9ef157dbea5}\label{group__CharacterTests_gacd436aa6c42b508930a6a9ef157dbea5} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Elementalist\+Basic}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000006}{Test}}]Basic construction and use of \doxylink{classElementalist}{Elementalist} card. \end{DoxyRefDesc}
+\Hypertarget{group__CharacterTests_ga64c3701639bb6246fb27c64adbfa2f1c}\label{group__CharacterTests_ga64c3701639bb6246fb27c64adbfa2f1c} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Is\+Dead\+Works}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000007}{Test}}]Verifies that is\+Dead() returns true only when HP \texorpdfstring{$<$}{<}= 0. \end{DoxyRefDesc}
+\Hypertarget{group__CharacterTests_ga62bb2f6d47b556d3aa2c4f3fbd0ced41}\label{group__CharacterTests_ga62bb2f6d47b556d3aa2c4f3fbd0ced41} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Knight\+Blocks\+One\+And\+Counterattacks}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000001}{Test}}]\doxylink{classKnight}{Knight} blocks 1 incoming damage and counterattacks for 1. \end{DoxyRefDesc}
+\Hypertarget{group__CharacterTests_gac374e046114f7fedb8af27e0d38f082f}\label{group__CharacterTests_gac374e046114f7fedb8af27e0d38f082f} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Thief\+Steals\+One\+Card}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000005}{Test}}]\doxylink{classThief}{Thief} steals one non-\/\+Thief card from opponent\textquotesingle{}s hand. \end{DoxyRefDesc}
+\Hypertarget{group__CharacterTests_gab62939dfa55e6b567a08f75de8d42cc1}\label{group__CharacterTests_gab62939dfa55e6b567a08f75de8d42cc1} 
+\index{Character Logic Tests@{Character Logic Tests}!TEST@{TEST}}
+\index{TEST@{TEST}!Character Logic Tests@{Character Logic Tests}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Character\+Test}]{,  }\item[{Warlock\+Sacrifice}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\mbox{\hyperlink{test__test000003}{Test}}]\doxylink{classWarlock}{Warlock} sacrifices 1 HP to gain +2 damage on attack. \end{DoxyRefDesc}

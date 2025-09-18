@@ -1,0 +1,263 @@
+\doxysection{Character Class Reference}
+\hypertarget{classCharacter}{}\label{classCharacter}\index{Character@{Character}}
+
+
+Represents a combat unit summoned to the battlefield.  
+
+
+
+
+{\ttfamily \#include $<$Character.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacter_af8bc7f888ba550c7ab6b43e448e0fa57}{Character}} (const std\+::string \&name, int attack, int health)
+\begin{DoxyCompactList}\small\item\em Constructs a character with unknown type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCharacter_ae24a283a3d454f0ffd2d0cd4d84004eb}{Character}} (const std\+::string \&name, int attack, int health, \mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{Character\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructs a character with a specific type. \end{DoxyCompactList}\item 
+\Hypertarget{classCharacter_a400f79a5c5cdd8c2b33e50e5c744d1f7}\label{classCharacter_a400f79a5c5cdd8c2b33e50e5c744d1f7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Character} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classCharacter_a1ab1d31d7776d21a0315434acc61b342}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the character\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_aaaa4b78668224b53fa593afe0a818cd1}{get\+Attack}} () const
+\begin{DoxyCompactList}\small\item\em Gets the character\textquotesingle{}s attack value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85}{get\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Gets the character\textquotesingle{}s current health. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_abead49d03869cacd4772556905e9ae58}{attack\+Target}} (\mbox{\hyperlink{classCharacter}{Character}} \&target)
+\begin{DoxyCompactList}\small\item\em Attacks another character, reducing its health. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_ae67bec99cb54718ecbcc975c934e3ae0}{on\+Attacked}} (int damage, \mbox{\hyperlink{classCharacter}{Character}} \texorpdfstring{$\ast$}{*}attacker=nullptr)
+\begin{DoxyCompactList}\small\item\em Handles receiving damage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_acadeeda3aa196b336825944e246b443a}{heal}} (int amount)
+\begin{DoxyCompactList}\small\item\em Heals the character by a given amount (capped by max health). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{Character\+Type}} \mbox{\hyperlink{classCharacter_a586974c5de3748b7c6abd76604f44273}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the character\textquotesingle{}s type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCharacter_a6581a9a16111768ae65603d060fca9d7}{is\+Dead}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the character has 0 or less HP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a combat unit summoned to the battlefield. 
+
+Each character has a name, attack value, health, and type. Characters can engage in combat, receive damage, be healed, and be destroyed. They are not playable cards, but rather active units placed on the board. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCharacter_af8bc7f888ba550c7ab6b43e448e0fa57}\label{classCharacter_af8bc7f888ba550c7ab6b43e448e0fa57} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{attack,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Constructs a character with unknown type. 
+
+Constructs a \doxylink{classCharacter}{Character} with a name, attack, and health.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{classCharacter}{Character} name. \\
+\hline
+{\em attack} & Attack value. \\
+\hline
+{\em health} & Starting and maximum health.\\
+\hline
+{\em name} & The character\textquotesingle{}s name. \\
+\hline
+{\em attack} & The base attack value. \\
+\hline
+{\em health} & The initial health value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCharacter_ae24a283a3d454f0ffd2d0cd4d84004eb}\label{classCharacter_ae24a283a3d454f0ffd2d0cd4d84004eb} 
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Character\+::\+Character (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{attack,  }\item[{int}]{health,  }\item[{\mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{Character\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructs a character with a specific type. 
+
+Constructs a \doxylink{classCharacter}{Character} with an assigned type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{classCharacter}{Character} name. \\
+\hline
+{\em attack} & Attack value. \\
+\hline
+{\em health} & Starting and maximum health. \\
+\hline
+{\em type} & The character type.\\
+\hline
+\end{DoxyParams}
+Also sets max health equal to the starting health.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The character\textquotesingle{}s name. \\
+\hline
+{\em attack} & The base attack value. \\
+\hline
+{\em health} & The initial and max health value. \\
+\hline
+{\em type} & The character\textquotesingle{}s class/type. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCharacter_abead49d03869cacd4772556905e9ae58}\label{classCharacter_abead49d03869cacd4772556905e9ae58} 
+\index{Character@{Character}!attackTarget@{attackTarget}}
+\index{attackTarget@{attackTarget}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{attackTarget()}{attackTarget()}}
+{\footnotesize\ttfamily void Character\+::attack\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCharacter}{Character}} \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Attacks another character, reducing its health. 
+
+Performs an attack on another character.
+
+This method applies this character’s attack to the target’s health.
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The enemy character to be attacked.\\
+\hline
+\end{DoxyParams}
+Applies class-\/based effects depending on the character type\+:
+\begin{DoxyItemize}
+\item \doxylink{classBerserk}{Berserk}\+: Bonus damage when below 50\% health.
+\item \doxylink{classWarlock}{Warlock}\+: Sacrifices HP for extra damage.
+\item \doxylink{classAssassin}{Assassin}\+: 30\% chance to deal critical (double) damage.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Reference to the character being attacked. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCharacter_aaaa4b78668224b53fa593afe0a818cd1}\label{classCharacter_aaaa4b78668224b53fa593afe0a818cd1} 
+\index{Character@{Character}!getAttack@{getAttack}}
+\index{getAttack@{getAttack}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getAttack()}{getAttack()}}
+{\footnotesize\ttfamily int Character\+::get\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the character\textquotesingle{}s attack value. 
+
+Gets the character\textquotesingle{}s current attack value.
+
+\begin{DoxyReturn}{Returns}
+Integer attack.
+
+Attack value as an integer. 
+\end{DoxyReturn}
+\Hypertarget{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85}\label{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85} 
+\index{Character@{Character}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily int Character\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the character\textquotesingle{}s current health. 
+
+\begin{DoxyReturn}{Returns}
+Integer health.
+
+Health as an integer. 
+\end{DoxyReturn}
+\Hypertarget{classCharacter_a1ab1d31d7776d21a0315434acc61b342}\label{classCharacter_a1ab1d31d7776d21a0315434acc61b342} 
+\index{Character@{Character}!getName@{getName}}
+\index{getName@{getName}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string Character\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the character\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+String name.
+
+Name as a std\+::string. 
+\end{DoxyReturn}
+\Hypertarget{classCharacter_a586974c5de3748b7c6abd76604f44273}\label{classCharacter_a586974c5de3748b7c6abd76604f44273} 
+\index{Character@{Character}!getType@{getType}}
+\index{getType@{getType}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{Character\+Type}} Character\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the character\textquotesingle{}s type. 
+
+\begin{DoxyReturn}{Returns}
+Character\+Type enum value. 
+\end{DoxyReturn}
+\Hypertarget{classCharacter_acadeeda3aa196b336825944e246b443a}\label{classCharacter_acadeeda3aa196b336825944e246b443a} 
+\index{Character@{Character}!heal@{heal}}
+\index{heal@{heal}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{heal()}{heal()}}
+{\footnotesize\ttfamily void Character\+::heal (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Heals the character by a given amount (capped by max health). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & HP to restore. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCharacter_a6581a9a16111768ae65603d060fca9d7}\label{classCharacter_a6581a9a16111768ae65603d060fca9d7} 
+\index{Character@{Character}!isDead@{isDead}}
+\index{isDead@{isDead}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{isDead()}{isDead()}}
+{\footnotesize\ttfamily bool Character\+::is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the character has 0 or less HP. 
+
+Checks whether the character is dead (health \texorpdfstring{$<$}{<}= 0).
+
+\begin{DoxyReturn}{Returns}
+True if dead, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classCharacter_ae67bec99cb54718ecbcc975c934e3ae0}\label{classCharacter_ae67bec99cb54718ecbcc975c934e3ae0} 
+\index{Character@{Character}!onAttacked@{onAttacked}}
+\index{onAttacked@{onAttacked}!Character@{Character}}
+\doxysubsubsection{\texorpdfstring{onAttacked()}{onAttacked()}}
+{\footnotesize\ttfamily void Character\+::on\+Attacked (\begin{DoxyParamCaption}\item[{int}]{damage,  }\item[{\mbox{\hyperlink{classCharacter}{Character}} \texorpdfstring{$\ast$}{*}}]{attacker = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Handles receiving damage. 
+
+Handles receiving damage from another character.
+
+Reduces the character\textquotesingle{}s health by the given damage. Optionally, can receive a pointer to the attacker (unused currently).
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Amount of damage received. \\
+\hline
+{\em attacker} & Optional pointer to the attacker.\\
+\hline
+{\em damage} & The amount of damage taken. \\
+\hline
+{\em attacker} & Pointer to the attacking character (can be null). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Character_8hpp}{Character.\+hpp}}\item 
+src/Character.\+cpp\end{DoxyCompactItemize}

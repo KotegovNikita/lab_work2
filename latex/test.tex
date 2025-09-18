@@ -1,0 +1,45 @@
+\chapter{Test List}
+\hypertarget{test}{}\label{test}\index{Test List@{Test List}}
+
+\begin{DoxyRefList}
+\item[Member \doxylink{group__CharacterTests_ga62bb2f6d47b556d3aa2c4f3fbd0ced41}{TEST} (Character\+Test, Knight\+Blocks\+One\+And\+Counterattacks)]\label{test__test000001}%
+\Hypertarget{test__test000001}%
+\doxylink{classKnight}{Knight} blocks 1 incoming damage and counterattacks for 1.  
+\item[Member \doxylink{group__CharacterTests_ga07f275d3e1948456e1b6db4da93fbb3e}{TEST} (Character\+Test, Berserk\+Bonus\+Damage)]\label{test__test000002}%
+\Hypertarget{test__test000002}%
+\doxylink{classBerserk}{Berserk} deals +2 damage if below 50\% HP.  
+\item[Member \doxylink{group__CharacterTests_gab62939dfa55e6b567a08f75de8d42cc1}{TEST} (Character\+Test, Warlock\+Sacrifice)]\label{test__test000003}%
+\Hypertarget{test__test000003}%
+\doxylink{classWarlock}{Warlock} sacrifices 1 HP to gain +2 damage on attack.  
+\item[Member \doxylink{group__CharacterTests_ga6a4d36b707b5f6ae5fd5fa0b576b024a}{TEST} (Character\+Test, Assassin\+Critical\+Hit)]\label{test__test000004}%
+\Hypertarget{test__test000004}%
+\doxylink{classAssassin}{Assassin} lands critical hit (forced via srand(0)).  
+\item[Member \doxylink{group__CharacterTests_gac374e046114f7fedb8af27e0d38f082f}{TEST} (Character\+Test, Thief\+Steals\+One\+Card)]\label{test__test000005}%
+\Hypertarget{test__test000005}%
+\doxylink{classThief}{Thief} steals one non-\/\+Thief card from opponent\textquotesingle{}s hand.  
+\item[Member \doxylink{group__CharacterTests_gacd436aa6c42b508930a6a9ef157dbea5}{TEST} (Character\+Test, Elementalist\+Basic)]\label{test__test000006}%
+\Hypertarget{test__test000006}%
+Basic construction and use of \doxylink{classElementalist}{Elementalist} card.  
+\item[Member \doxylink{group__CharacterTests_ga64c3701639bb6246fb27c64adbfa2f1c}{TEST} (Character\+Test, Is\+Dead\+Works)]\label{test__test000007}%
+\Hypertarget{test__test000007}%
+Verifies that is\+Dead() returns true only when HP \texorpdfstring{$<$}{<}= 0.  
+\item[Member \doxylink{group__GameManagerTests_ga246bed3cbcaff2cb79bdc66565e94f0b}{TEST\+\_\+F} (\doxylink{classGameManagerTest}{Game\+Manager\+Test}, Initialize\+Decks)]\label{test__test000008}%
+\Hypertarget{test__test000008}%
+Ensures both player and AI decks are initialized with 10 cards.  
+\item[Member \doxylink{group__GameManagerTests_ga50cc8471d616c584617d62c2117c7d86}{TEST\+\_\+F} (\doxylink{classGameManagerTest}{Game\+Manager\+Test}, Deal\+Cards\+Check\+Limits)]\label{test__test000009}%
+\Hypertarget{test__test000009}%
+Validates that deal\+Cards respects card composition rules\+:
+\begin{DoxyItemize}
+\item max 1 \doxylink{classThief}{Thief}
+\item attempts to limit to 4 Ability\+Cards (may be exceeded via fallback).  
+\end{DoxyItemize}
+\item[Member \doxylink{group__GameManagerTests_ga988d7ec0db3be3f235d4a1f391742bff}{TEST\+\_\+F} (\doxylink{classGameManagerTest}{Game\+Manager\+Test}, Draw\+Card\+For\+Player)]\label{test__test000010}%
+\Hypertarget{test__test000010}%
+Ensures drawing a card adds to player\textquotesingle{}s hand and removes from deck.  
+\item[Member \doxylink{group__GameManagerTests_ga015e4677128b17eba05dbc26dcd26e57}{TEST\+\_\+F} (\doxylink{classGameManagerTest}{Game\+Manager\+Test}, Check\+Game\+Over\+And\+Determine\+Winner\+Empty)]\label{test__test000011}%
+\Hypertarget{test__test000011}%
+Verifies that game ends and reports a draw when all resources are empty.  
+\item[Member \doxylink{group__GameManagerTests_gab82cd0a31c92851059ab9b62151cad95}{TEST\+\_\+F} (\doxylink{classGameManagerTest}{Game\+Manager\+Test}, Ai\+Make\+Move\+Non\+Empty\+Hand)]\label{test__test000012}%
+\Hypertarget{test__test000012}%
+Ensures the AI plays a card if its hand is non-\/empty and its field is empty. 
+\end{DoxyRefList}

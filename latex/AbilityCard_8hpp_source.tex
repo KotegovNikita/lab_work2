@@ -1,0 +1,32 @@
+\doxysection{Ability\+Card.\+hpp}
+\hypertarget{AbilityCard_8hpp_source}{}\label{AbilityCard_8hpp_source}\index{include/AbilityCard.hpp@{include/AbilityCard.hpp}}
+\mbox{\hyperlink{AbilityCard_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ABILITY\_CARD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ABILITY\_CARD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Card_8hpp}{Card.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAbilityCard}{AbilityCard}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCard}{Card}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ m\_name;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_cost;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_effectPower;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classAbilityCard}{AbilityCard}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ cost,\ \textcolor{keywordtype}{int}\ effectPower);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classAbilityCard_a9087b6fdbd184025aedbbedff255f7fd}{\string~AbilityCard}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{classAbilityCard_a5e7ccdf36edc6ac1e082f79370522df6}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAbilityCard_af4b2d0a189b892821c777d2cc89ae911}{getCost}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAbilityCard_af664d68970552e7516d9dc8b23099455}{use}}();\ \textcolor{comment}{//\ May\ be\ overridden\ by\ specific\ ability\ types}}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ABILITY\_CARD\_HPP}}
+\DoxyCodeLine{00062\ }
+
+\end{DoxyCode}

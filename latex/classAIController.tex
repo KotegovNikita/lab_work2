@@ -1,0 +1,62 @@
+\doxysection{AIController Class Reference}
+\hypertarget{classAIController}{}\label{classAIController}\index{AIController@{AIController}}
+
+
+Handles AI decisions during its turn in the game.  
+
+
+
+
+{\ttfamily \#include $<$AIController.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAIController_a4445fad99bfed7182e402c1416d34ee4}\label{classAIController_a4445fad99bfed7182e402c1416d34ee4} 
+{\bfseries AIController} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classAIController_a2ceffe045753738dd0d693c321fcaf7c}\label{classAIController_a2ceffe045753738dd0d693c321fcaf7c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+AIController} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAIController_acd45ad509a72144f1e443cbc6d562204}{make\+Move}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&game)
+\begin{DoxyCompactList}\small\item\em Executes the AI\textquotesingle{}s turn logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles AI decisions during its turn in the game. 
+
+This class encapsulates logic for choosing which cards to play and which characters to attack. It uses the \doxylink{classGameManager}{Game\+Manager} interface to interact with the game state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAIController_acd45ad509a72144f1e443cbc6d562204}\label{classAIController_acd45ad509a72144f1e443cbc6d562204} 
+\index{AIController@{AIController}!makeMove@{makeMove}}
+\index{makeMove@{makeMove}!AIController@{AIController}}
+\doxysubsubsection{\texorpdfstring{makeMove()}{makeMove()}}
+{\footnotesize\ttfamily void AIController\+::make\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{game }\end{DoxyParamCaption})}
+
+
+
+Executes the AI\textquotesingle{}s turn logic. 
+
+Makes a move on behalf of the AI player.
+
+This function uses the provided \doxylink{classGameManager}{Game\+Manager} reference to simulate an AI move\+: selecting a card, playing it, and possibly attacking.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Reference to the \doxylink{classGameManager}{Game\+Manager} that controls the game state.\\
+\hline
+\end{DoxyParams}
+This method should contain the logic for the AI to analyze the game state, select the best available action (e.\+g., play a card, attack, use ability), and execute it through the \doxylink{classGameManager}{Game\+Manager} interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling the game flow. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{AIController_8hpp}{AIController.\+hpp}}\item 
+src/AIController.\+cpp\end{DoxyCompactItemize}

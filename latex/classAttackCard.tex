@@ -1,0 +1,172 @@
+\doxysection{Attack\+Card Class Reference}
+\hypertarget{classAttackCard}{}\label{classAttackCard}\index{AttackCard@{AttackCard}}
+
+
+Represents a card that deals direct damage to enemy characters.  
+
+
+
+
+{\ttfamily \#include $<$Attack\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Attack\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Attack\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAttackCard_ac07b89011690a554281f3cc0aa1d10e7}{Attack\+Card}} (const std\+::string \&name, int cost, int damage)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAttackCard}{Attack\+Card} with specified parameters. \end{DoxyCompactList}\item 
+\Hypertarget{classAttackCard_a17f87a155196803b7dc2dd986a68480a}\label{classAttackCard_a17f87a155196803b7dc2dd986a68480a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Attack\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAttackCard_a1ac161818357743ae17e9456d1ce480f}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the card name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the cost to play this card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&gm) override
+\begin{DoxyCompactList}\small\item\em Applies the effect of the attack card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAttackCard_a4e607b396c83cd01b7f8d4d081e0590f}\label{classAttackCard_a4e607b396c83cd01b7f8d4d081e0590f} 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the attack card. \end{DoxyCompactList}\item 
+\Hypertarget{classAttackCard_afd4ed872aceb01777227abef1cf82e52}\label{classAttackCard_afd4ed872aceb01777227abef1cf82e52} 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+\Hypertarget{classAttackCard_a877561c9be898aa78b094944d8aedc48}\label{classAttackCard_a877561c9be898aa78b094944d8aedc48} 
+int {\bfseries m\+\_\+damage}
+\begin{DoxyCompactList}\small\item\em Amount of damage dealt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a card that deals direct damage to enemy characters. 
+
+This abstract class is intended to be inherited by specific attack card types (e.\+g., Lightning\+Strike, \doxylink{classFlameWave}{Flame\+Wave}). It defines the basic interface and data for damaging effects.
+
+Inherits from the base \doxylink{classCard}{Card} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAttackCard_ac07b89011690a554281f3cc0aa1d10e7}\label{classAttackCard_ac07b89011690a554281f3cc0aa1d10e7} 
+\index{AttackCard@{AttackCard}!AttackCard@{AttackCard}}
+\index{AttackCard@{AttackCard}!AttackCard@{AttackCard}}
+\doxysubsubsection{\texorpdfstring{AttackCard()}{AttackCard()}}
+{\footnotesize\ttfamily Attack\+Card\+::\+Attack\+Card (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{cost,  }\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classAttackCard}{Attack\+Card} with specified parameters. 
+
+Constructs an \doxylink{classAttackCard}{Attack\+Card} with a name, cost, and damage value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the card. \\
+\hline
+{\em cost} & The energy or mana cost to play the card. \\
+\hline
+{\em damage} & The amount of damage this card deals.\\
+\hline
+{\em name} & The name of the attack card. \\
+\hline
+{\em cost} & The resource cost required to play the card. \\
+\hline
+{\em damage} & The amount of damage the card deals when used. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1}\label{classAttackCard_ae0047c48a66e6628b05b232a61bc93b1} 
+\index{AttackCard@{AttackCard}!getCost@{getCost}}
+\index{getCost@{getCost}!AttackCard@{AttackCard}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Attack\+Card\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the cost to play this card. 
+
+Retrieves the cost to play the card.
+
+\begin{DoxyReturn}{Returns}
+Integer cost value.
+
+The cost as an integer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_ac7b96ae42dbaa29bc701021802df03f6}{Card}}.
+
+\Hypertarget{classAttackCard_a1ac161818357743ae17e9456d1ce480f}\label{classAttackCard_a1ac161818357743ae17e9456d1ce480f} 
+\index{AttackCard@{AttackCard}!getName@{getName}}
+\index{getName@{getName}!AttackCard@{AttackCard}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Attack\+Card\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the card name. 
+
+Retrieves the name of the attack card.
+
+\begin{DoxyReturn}{Returns}
+The card name as a string.
+
+The name as a std\+::string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCard_a33c4baa51bfede30fe7b6ff8e71f75bd}{Card}}.
+
+\Hypertarget{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911}\label{classAttackCard_ac3d77cc19bf5ca8159c8546f32ea1911} 
+\index{AttackCard@{AttackCard}!use@{use}}
+\index{use@{use}!AttackCard@{AttackCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Attack\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the effect of the attack card. 
+
+Applies the attack card effect.
+
+Must be overridden by derived classes to define how damage is applied in the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} instance managing the current game state.\\
+\hline
+\end{DoxyParams}
+This function logs the attack action and shows the amount of damage dealt. Actual game mechanics for applying damage should be implemented here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} for accessing the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classCard_adb4dc1738325ee2b53eac1ee7df4249e}{Card}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classTestAttackCard_ae3e484e84d0bcfdc8f314fdffade1502}{Test\+Attack\+Card}}, \mbox{\hyperlink{classFlameWave_a7050a68dd4e34481bae2d34ccf81c178}{Flame\+Wave}}, and \mbox{\hyperlink{classLightning__strike_a0fb3893331ff718184c7ec30ae35b07f}{Lightning\+\_\+strike}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{AttackCard_8hpp}{Attack\+Card.\+hpp}}\item 
+src/Attack\+Card.\+cpp\end{DoxyCompactItemize}

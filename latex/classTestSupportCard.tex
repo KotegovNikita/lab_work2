@@ -1,0 +1,88 @@
+\doxysection{Test\+Support\+Card Class Reference}
+\hypertarget{classTestSupportCard}{}\label{classTestSupportCard}\index{TestSupportCard@{TestSupportCard}}
+
+
+Test implementation of \doxylink{classSupportCard}{Support\+Card}.  
+
+
+
+
+Inheritance diagram for Test\+Support\+Card\+:
+% FIG 0
+
+
+Collaboration diagram for Test\+Support\+Card\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTestSupportCard_ad873db7fa2fcd8352a8d73ca5d9be2d1}\label{classTestSupportCard_ad873db7fa2fcd8352a8d73ca5d9be2d1} 
+{\bfseries Test\+Support\+Card} (const std\+::string \&n, int c, int p)
+\item 
+void \mbox{\hyperlink{classTestSupportCard_a9bcb581a42eaf3e3212144f85393ab7c}{use}} (\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&) override
+\begin{DoxyCompactList}\small\item\em Executes the card’s effect (to be overridden in derived classes). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSupportCard}{Support\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSupportCard_a562738edad1adf3689e463ac06b90b29}{Support\+Card}} (const std\+::string \&name, int cost, int power)
+\begin{DoxyCompactList}\small\item\em Constructs a support card. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Support\+Card} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSupportCard_a8ffbac24f03e4770f8de39fd8ba327ac}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name of the support card. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSupportCard_a8ba7468bb3fadde328c649de2a2875c0}{get\+Cost}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the cost to play the card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCard}{Card}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{\texorpdfstring{$\sim$}{\string~}\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSupportCard}{Support\+Card}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Name of the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em Cost to play the card. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+power}
+\begin{DoxyCompactList}\small\item\em Effect strength (e.\+g., healing amount or shield value) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Test implementation of \doxylink{classSupportCard}{Support\+Card}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTestSupportCard_a9bcb581a42eaf3e3212144f85393ab7c}\label{classTestSupportCard_a9bcb581a42eaf3e3212144f85393ab7c} 
+\index{TestSupportCard@{TestSupportCard}!use@{use}}
+\index{use@{use}!TestSupportCard@{TestSupportCard}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Test\+Support\+Card\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameManager}{Game\+Manager}} \&}]{gm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes the card’s effect (to be overridden in derived classes). 
+
+Base implementation of the use effect for support cards.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} instance.\\
+\hline
+\end{DoxyParams}
+This version only prints a message. Derived classes should override this method to implement actual in-\/game effects like healing or buffs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em gm} & Reference to the \doxylink{classGameManager}{Game\+Manager} handling the game state. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classSupportCard_a5d41b2781b4b54e048c2693ef7588a7c}{Support\+Card}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/\mbox{\hyperlink{test__card__logic_8cpp}{test\+\_\+card\+\_\+logic.\+cpp}}\end{DoxyCompactItemize}

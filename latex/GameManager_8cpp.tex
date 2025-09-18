@@ -1,0 +1,65 @@
+\doxysection{src/\+Game\+Manager.cpp File Reference}
+\hypertarget{GameManager_8cpp}{}\label{GameManager_8cpp}\index{src/GameManager.cpp@{src/GameManager.cpp}}
+
+
+Implementation of the \doxylink{classGameManager}{Game\+Manager} class – the central coordinator of a console‑based turn‑based card RPG. It is responsible for initialising decks, handling the main turn loop, controlling AI behaviour, checking win conditions and exposing helpers that other cards use to interact with the battlefield.  
+
+
+{\ttfamily \#include "{}Game\+Manager.\+hpp"{}}\newline
+{\ttfamily \#include "{}Ability\+Card.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include "{}Knight.\+hpp"{}}\newline
+{\ttfamily \#include "{}Berserk.\+hpp"{}}\newline
+{\ttfamily \#include "{}Lightning\+\_\+strike.\+hpp"{}}\newline
+{\ttfamily \#include "{}Flame\+Wave.\+hpp"{}}\newline
+{\ttfamily \#include "{}Heal.\+hpp"{}}\newline
+{\ttfamily \#include "{}Assassin.\+hpp"{}}\newline
+{\ttfamily \#include "{}Elementalist.\+hpp"{}}\newline
+{\ttfamily \#include "{}Thief.\+hpp"{}}\newline
+{\ttfamily \#include "{}Barrier.\+hpp"{}}\newline
+{\ttfamily \#include "{}Warlock.\+hpp"{}}\newline
+Include dependency graph for Game\+Manager.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{GameManager_8cpp_a162d55b8c8d8182c948dcfe14383aff7}{can\+Add\+Card\+To\+Hand}} (const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ \&card, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&hand)
+\begin{DoxyCompactList}\small\item\em Check whether {\ttfamily card} can legally be inserted into {\ttfamily hand}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{classGameManager}{Game\+Manager} class – the central coordinator of a console‑based turn‑based card RPG. It is responsible for initialising decks, handling the main turn loop, controlling AI behaviour, checking win conditions and exposing helpers that other cards use to interact with the battlefield. 
+
+The file also contains several small helper routines that are closely coupled to the manager logic (e.\+g. {\ttfamily can\+Add\+Card\+To\+Hand}). All comments follow the Doxygen style so the file can be fed directly to Doxygen without further changes.
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 $<$\+Your‑\+Name‑\+Here$>$. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{GameManager_8cpp_a162d55b8c8d8182c948dcfe14383aff7}\label{GameManager_8cpp_a162d55b8c8d8182c948dcfe14383aff7} 
+\index{GameManager.cpp@{GameManager.cpp}!canAddCardToHand@{canAddCardToHand}}
+\index{canAddCardToHand@{canAddCardToHand}!GameManager.cpp@{GameManager.cpp}}
+\doxysubsubsection{\texorpdfstring{canAddCardToHand()}{canAddCardToHand()}}
+{\footnotesize\ttfamily bool can\+Add\+Card\+To\+Hand (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ \&}]{card,  }\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classCard}{Card}} $>$ $>$ \&}]{hand }\end{DoxyParamCaption})}
+
+
+
+Check whether {\ttfamily card} can legally be inserted into {\ttfamily hand}. 
+
+Game rules forbid adding more than four ability cards or more than one {\ttfamily \doxylink{classThief}{Thief}} card to a single hand. All other cards are accepted by default.
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & Reference to the {\itshape owning} pointer of the card to test. \\
+\hline
+{\em hand} & The target hand (ownership is {\itshape not} modified). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the card may be added, {\ttfamily false} otherwise. 
+\end{DoxyReturn}

@@ -1,0 +1,61 @@
+\doxysection{Character.\+hpp}
+\hypertarget{Character_8hpp_source}{}\label{Character_8hpp_source}\index{include/Character.hpp@{include/Character.hpp}}
+\mbox{\hyperlink{Character_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHARACTER\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHARACTER\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{CharacterType}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classKnight}{Knight}},}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classBerserk}{Berserk}},}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classElementalist}{Elementalist}},}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classWarlock}{Warlock}},}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classAssassin}{Assassin}},}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classThief}{Thief}},}
+\DoxyCodeLine{00026\ \ \ \ \ Unknown}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCharacter}{Character}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ m\_name;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_attack;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_health;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_maxHealth;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{CharacterType}}\ m\_type;\ \ \ \ \ \ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classCharacter}{Character}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ attack,\ \textcolor{keywordtype}{int}\ health);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{classCharacter}{Character}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ attack,\ \textcolor{keywordtype}{int}\ health,\ \mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{CharacterType}}\ type);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{classCharacter_a400f79a5c5cdd8c2b33e50e5c744d1f7}{\string~Character}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classCharacter_a1ab1d31d7776d21a0315434acc61b342}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacter_aaaa4b78668224b53fa593afe0a818cd1}{getAttack}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacter_a39eeebcbdbc13cd4d1d274da5d051f85}{getHealth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_abead49d03869cacd4772556905e9ae58}{attackTarget}}(\mbox{\hyperlink{classCharacter}{Character}}\&\ target);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_ae67bec99cb54718ecbcc975c934e3ae0}{onAttacked}}(\textcolor{keywordtype}{int}\ damage,\ \mbox{\hyperlink{classCharacter}{Character}}*\ attacker\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_acadeeda3aa196b336825944e246b443a}{heal}}(\textcolor{keywordtype}{int}\ amount)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ m\_health\ =\ std::min(m\_health\ +\ amount,\ m\_maxHealth);}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{Character_8hpp_ad0cd52c7c9b13be13f9aafebd2e1c860}{CharacterType}}\ \mbox{\hyperlink{classCharacter_a586974c5de3748b7c6abd76604f44273}{getType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_type;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCharacter_a6581a9a16111768ae65603d060fca9d7}{isDead}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHARACTER\_HPP}}
+\DoxyCodeLine{00132\ }
+
+\end{DoxyCode}
